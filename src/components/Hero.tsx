@@ -39,6 +39,20 @@ const Hero = () => {
               Libération Somato-Émotionnelle
             </span>
           </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 mb-8">
+            <Button onClick={scrollToContact} size="lg" className="text-lg px-8">
+              Prendre rendez-vous
+            </Button>
+            <Button 
+              onClick={scrollToApproach}
+              variant="outline" 
+              size="lg"
+              className="text-lg px-8 border-2"
+            >
+              Découvrir l'approche
+            </Button>
+          </div>
           
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground leading-tight">
             Retrouver l'équilibre,<br />
@@ -53,20 +67,6 @@ const Hero = () => {
             Méthode de libération somato-émotionnelle par la thérapie manuelle. 
             Un accompagnement holistique où le corps, les émotions et la psyché sont intimement liés.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button onClick={scrollToContact} size="lg" className="text-lg px-8">
-              Prendre rendez-vous
-            </Button>
-            <Button 
-              onClick={scrollToApproach}
-              variant="outline" 
-              size="lg"
-              className="text-lg px-8 border-2"
-            >
-              Découvrir l'approche
-            </Button>
-          </div>
         </div>
       </div>
 
