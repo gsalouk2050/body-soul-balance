@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import balanceImage from "@/assets/balance-stones.jpg";
+import therapistPhoto from "@/assets/therapist-photo.jpg";
 
 const About = () => {
   return (
@@ -51,8 +51,8 @@ const About = () => {
             <div className="order-1 md:order-2">
               <Card className="overflow-hidden border-none shadow-lg">
                 <img
-                  src={balanceImage}
-                  alt="Équilibre et harmonie"
+                  src={therapistPhoto}
+                  alt="Thérapeute psychocorporelle DCG"
                   className="w-full h-full object-cover"
                 />
               </Card>
