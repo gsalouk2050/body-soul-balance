@@ -73,12 +73,14 @@ const Services = () => {
         </div>
 
         <Tabs defaultValue="therapy" className="max-w-6xl mx-auto">
-          <TabsList className="grid w-full grid-cols-2 mb-12 h-auto">
-            <TabsTrigger value="therapy" className="text-lg py-3">
-              Thérapie Somato-Émotionnelle
+          <TabsList className="grid w-full grid-cols-2 mb-12 h-auto gap-2">
+            <TabsTrigger value="therapy" className="text-sm sm:text-base lg:text-lg py-3 px-2 sm:px-4">
+              <span className="hidden sm:inline">Thérapie Somato-Émotionnelle</span>
+              <span className="sm:hidden">Thérapie</span>
             </TabsTrigger>
-            <TabsTrigger value="massage" className="text-lg py-3">
-              Massothérapie
+            <TabsTrigger value="massage" className="text-sm sm:text-base lg:text-lg py-3 px-2 sm:px-4">
+              <span className="hidden sm:inline">Massothérapie</span>
+              <span className="sm:hidden">Massage</span>
             </TabsTrigger>
           </TabsList>
 
