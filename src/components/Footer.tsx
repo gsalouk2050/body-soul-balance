@@ -18,7 +18,7 @@ const Footer = () => {
 
           <div className="space-y-2 text-cream/70 text-sm">
             <p>Rue des Vollandes 6, 1207 Genève, Suisse</p>
-            <p>Tél: <a href="tel:+41783434527" className="hover:text-cream transition-colors">078 343 45 27</a></p>
+            <p>Tél: <a href="tel:+41783434527" className="hover:text-cream transition-colors">+41 78 343 45 27</a></p>
           </div>
 
           <div className="mt-8 pt-8 border-t border-cream/20">
