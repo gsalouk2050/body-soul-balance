@@ -3,7 +3,7 @@ import therapistPhoto from "@/assets/therapist-photo.jpg";
 
 const About = () => {
   return (
-    <section id="about" className="py-24 bg-accent/30">
+    <section id="about" className="py-24 bg-gradient-to-br from-sage-light/30 via-beige/20 to-accent/40">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -49,7 +49,7 @@ const About = () => {
             </div>
 
             <div className="order-1 md:order-2">
-              <Card className="overflow-hidden border-none shadow-lg">
+              <Card className="overflow-hidden border-primary/20 shadow-xl bg-background/95 backdrop-blur-sm">
                 <img
                   src={therapistPhoto}
                   alt="Thérapeute psychocorporelle DCG"
@@ -59,7 +59,7 @@ const About = () => {
             </div>
           </div>
 
-          <Card className="mt-16 p-8 md:p-12 bg-gradient-to-br from-primary/10 to-accent/30 border-primary/20">
+          <Card className="mt-16 p-8 md:p-12 bg-gradient-to-br from-primary/15 via-sage-light/25 to-beige/20 border-primary/30 backdrop-blur-sm">
             <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center text-foreground">
               Mon Intention
             </h3>
