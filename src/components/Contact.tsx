@@ -4,7 +4,7 @@ import { MapPin, Phone, Bus } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 bg-accent/30">
+    <section id="contact" className="py-24 bg-gradient-to-br from-primary/10 via-sage-light/30 to-beige/25">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
@@ -17,7 +17,7 @@ const Contact = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="p-8 hover:shadow-lg transition-all duration-300">
+            <Card className="p-8 hover:shadow-lg transition-all duration-300 bg-background/90 backdrop-blur-sm border-primary/10">
               <h3 className="text-2xl font-bold mb-6 text-foreground">
                 Informations pratiques
               </h3>
@@ -80,7 +80,7 @@ const Contact = () => {
               </div>
             </Card>
 
-            <Card className="p-8 hover:shadow-lg transition-all duration-300">
+            <Card className="p-8 hover:shadow-lg transition-all duration-300 bg-background/90 backdrop-blur-sm border-primary/10">
               <h3 className="text-2xl font-bold mb-6 text-foreground">
                 Carte
               </h3>
@@ -100,7 +100,7 @@ const Contact = () => {
             </Card>
           </div>
 
-          <Card className="mt-8 p-6 bg-primary/5 border-primary/20">
+          <Card className="mt-8 p-6 bg-gradient-to-br from-sage-light/20 via-primary/10 to-beige/15 border-primary/30 backdrop-blur-sm">
             <p className="text-center text-muted-foreground">
               <strong className="text-foreground">Thérapeute agréée ASCA et RME</strong>
               <br />

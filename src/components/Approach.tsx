@@ -34,7 +34,7 @@ const methods = [
 
 const Approach = () => {
   return (
-    <section id="approche" className="py-24 bg-accent/30">
+    <section id="approche" className="py-24 bg-gradient-to-br from-beige/30 via-cream to-sage-light/20">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
@@ -49,10 +49,10 @@ const Approach = () => {
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {approaches.map((approach, index) => (
-            <Card
-              key={index}
-              className="p-8 hover:shadow-lg transition-all duration-300 border-border/50 bg-card"
-            >
+              <Card
+                key={index}
+                className="p-8 hover:shadow-lg transition-all duration-300 border-border/50 bg-background/90 backdrop-blur-sm"
+              >
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                   <approach.icon className="w-6 h-6 text-primary" />
@@ -67,7 +67,7 @@ const Approach = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <Card className="p-8 bg-gradient-to-br from-primary/5 to-accent/20 border-primary/20">
+          <Card className="p-8 bg-gradient-to-br from-sage-light/20 via-primary/10 to-beige/15 border-primary/30 backdrop-blur-sm">
             <h3 className="text-2xl font-bold mb-6 text-center text-foreground">
               Méthodes Complémentaires
             </h3>

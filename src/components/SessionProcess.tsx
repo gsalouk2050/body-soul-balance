@@ -21,7 +21,7 @@ const steps = [
 
 const SessionProcess = () => {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-gradient-to-br from-primary/5 via-accent/20 to-beige/15">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
@@ -36,7 +36,7 @@ const SessionProcess = () => {
           {steps.map((step, index) => (
             <Card
               key={index}
-              className="p-8 text-center hover:shadow-lg transition-all duration-300 border-border/50"
+              className="p-8 text-center hover:shadow-lg transition-all duration-300 border-border/50 bg-background/90 backdrop-blur-sm"
             >
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
                 <step.icon className="w-8 h-8 text-primary" />
@@ -48,7 +48,7 @@ const SessionProcess = () => {
         </div>
 
         <div className="max-w-2xl mx-auto mt-12 text-center">
-          <Card className="p-8 bg-primary/5 border-primary/20">
+          <Card className="p-8 bg-gradient-to-br from-primary/10 via-sage-light/20 to-beige/15 border-primary/30 backdrop-blur-sm">
             <p className="text-lg text-foreground italic leading-relaxed">
               "Accompagner la personne là où elle en est. Chaque séance est une rencontre, 
               un espace où le corps peut s'exprimer, se déposer, et retrouver sa capacité 

@@ -61,7 +61,7 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="py-24 bg-background">
+    <section id="services" className="py-24 bg-gradient-to-br from-sage-light/40 via-background to-beige/20">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
@@ -86,7 +86,7 @@ const Services = () => {
 
           <TabsContent value="therapy" className="space-y-8">
             {therapyServices.map((service, index) => (
-              <Card key={index} className="p-8 hover:shadow-lg transition-all duration-300">
+              <Card key={index} className="p-8 hover:shadow-lg transition-all duration-300 bg-background/80 backdrop-blur-sm border-primary/10">
                 <div className="flex flex-col md:flex-row gap-6">
                   <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
                     <service.icon className="w-8 h-8 text-primary" />
@@ -115,7 +115,7 @@ const Services = () => {
               </Card>
             ))}
 
-            <Card className="p-8 bg-accent/30 border-primary/20">
+            <Card className="p-8 bg-gradient-to-br from-beige/20 via-sage-light/15 to-primary/10 border-primary/30 backdrop-blur-sm">
               <h4 className="text-xl font-bold mb-4 text-foreground">Également indiqué pour :</h4>
               <div className="grid sm:grid-cols-2 gap-3 text-muted-foreground">
                 <div className="flex items-start gap-2">
@@ -143,7 +143,7 @@ const Services = () => {
               {massageServices.map((service, index) => (
                 <Card
                   key={index}
-                  className="p-6 hover:shadow-lg transition-all duration-300 border-border/50"
+                  className="p-6 hover:shadow-lg transition-all duration-300 border-border/50 bg-background/90 backdrop-blur-sm"
                 >
                   <div className="flex items-start gap-4 mb-4">
                     <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
@@ -164,7 +164,7 @@ const Services = () => {
               ))}
             </div>
 
-            <Card className="p-6 bg-primary/5 border-primary/20">
+            <Card className="p-6 bg-gradient-to-br from-sage-light/20 via-primary/10 to-beige/15 border-primary/30 backdrop-blur-sm">
               <h4 className="font-bold text-foreground mb-2">
                 ✨ Thérapeute agréée ASCA et RME
               </h4>
