@@ -10,6 +10,14 @@ const Hero = () => {
     }
   };
 
+  const scrollToApproach = () => {
+    const element = document.getElementById("approche");
+    if (element) {
+      const offsetTop = element.offsetTop - 100; // Offset pour le header
+      window.scrollTo({ top: offsetTop, behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -51,7 +59,7 @@ const Hero = () => {
               Prendre rendez-vous
             </Button>
             <Button 
-              onClick={() => document.getElementById("approche")?.scrollIntoView({ behavior: "smooth" })}
+              onClick={scrollToApproach}
               variant="outline" 
               size="lg"
               className="text-lg px-8 border-2"
