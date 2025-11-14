@@ -33,7 +33,7 @@ const Contact = () => {
                       href="tel:+41783434527"
                       className="text-lg text-primary hover:underline"
                     >
-                      078 343 45 27
+                      +41 78 343 45 27
                     </a>
                   </div>
                 </div>
