@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import dcgLogo from "@/assets/dcg-logo.jpeg";
+import dcgLogo from "@/assets/dcg-logo.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,7 +39,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src={dcgLogo} alt="DCG Logo" className="h-16 w-16 object-contain mix-blend-multiply" />
+            <img src={dcgLogo} alt="DCG Logo" className="h-16 w-16 object-contain" />
             <div>
               <h1 className="text-xl font-bold text-foreground">DCG</h1>
               <p className="text-sm text-muted-foreground">Thérapie psychocorporelle</p>
