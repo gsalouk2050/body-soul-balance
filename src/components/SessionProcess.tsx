@@ -50,9 +50,8 @@ const SessionProcess = () => {
         <div className="max-w-2xl mx-auto mt-12 text-center">
           <Card className="p-8 bg-gradient-to-br from-primary/10 via-sage-light/20 to-beige/15 border-primary/30 backdrop-blur-sm">
             <p className="text-lg text-foreground italic leading-relaxed">
-              "Accompagner la personne là où elle en est. Chaque séance est une rencontre, 
-              un espace où le corps peut s'exprimer, se déposer, et retrouver sa capacité 
-              naturelle d'autorégulation."
+              "Le toucher thérapeutique est une méthode puissante qui renforce la relation de confiance, 
+              créant un espace de sécurité, d'écoute et de lâcher-prise."
             </p>
           </Card>
         </div>

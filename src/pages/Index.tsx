@@ -4,6 +4,7 @@ import Approach from "@/components/Approach";
 import Services from "@/components/Services";
 import SessionProcess from "@/components/SessionProcess";
 import About from "@/components/About";
+import InfoRequest from "@/components/InfoRequest";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -16,6 +17,7 @@ const Index = () => {
       <Services />
       <SessionProcess />
       <About />
+      <InfoRequest />
       <Contact />
       <Footer />
     </div>
