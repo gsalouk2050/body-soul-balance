@@ -11,8 +11,11 @@ const Contact = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
               Contact & Rendez-vous
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-muted-foreground mb-4">
               Je serai heureuse de vous accompagner dans votre cheminement vers l'équilibre.
+            </p>
+            <p className="text-muted-foreground italic">
+              📋 Une fiche de renseignements vous sera envoyée avant votre premier rendez-vous
             </p>
           </div>
 
@@ -44,11 +47,18 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-2">Adresse</h4>
-                    <p className="text-muted-foreground">
-                      Rue des Vollandes 6<br />
-                      1207 Genève, Suisse<br />
-                      <span className="text-sm">(Rez-de-chaussée)</span>
-                    </p>
+                    <a 
+                      href="https://maps.google.com/?q=Rue+des+Vollandes+6,+1207+Genève,+Suisse"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline"
+                    >
+                      <p className="text-muted-foreground">
+                        Rue des Vollandes 6<br />
+                        1207 Genève, Suisse<br />
+                        <span className="text-sm">(Rez-de-chaussée)</span>
+                      </p>
+                    </a>
                   </div>
                 </div>
 
@@ -101,11 +111,14 @@ const Contact = () => {
           </div>
 
           <Card className="mt-8 p-6 bg-gradient-to-br from-sage-light/20 via-primary/10 to-beige/15 border-primary/30 backdrop-blur-sm">
-            <p className="text-center text-muted-foreground">
-              <strong className="text-foreground">Thérapeute agréée ASCA et RME</strong>
-              <br />
-              Certaines assurances complémentaires remboursent une partie des séances.
-              Vérifiez la prise en charge auprès de votre caisse.
+            <p className="text-center text-muted-foreground mb-3">
+              <strong className="text-foreground">Thérapeute agréée ASCA et RME</strong> - labels de qualité reconnus
+            </p>
+            <p className="text-sm text-center text-muted-foreground mb-2">
+              <strong>ASCA</strong> (Fondation Suisse pour les Médecines Complémentaires) et <strong>RME</strong> (Registre de Médecine Empirique) sont des labels de qualité qui garantissent une formation professionnelle reconnue.
+            </p>
+            <p className="text-sm text-center text-muted-foreground">
+              Les massages sont pris en charge par les assurances complémentaires. Vérifiez auprès de votre caisse.
             </p>
           </Card>
         </div>

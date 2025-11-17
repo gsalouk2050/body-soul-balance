@@ -7,8 +7,10 @@ const therapyServices = [
   {
     icon: HandHeart,
     title: "Thérapie Somato-Émotionnelle",
-    duration: "90 minutes",
+    duration: "90 minutes (première séance)",
+    price: "CHF 150",
     description: "Libération profonde des tensions et blocages émotionnels inscrits dans le corps.",
+    note: "Non prise en charge par les assurances complémentaires",
     benefits: [
       "Comprendre le sens de vos tensions et blocages",
       "Retrouver une sécurité intérieure",
@@ -22,33 +24,44 @@ const massageServices = [
   {
     icon: Activity,
     title: "Massage thérapeutique",
-    duration: "60-90 minutes",
-    description: "Par un examen palpatoire précis, libère les tensions musculaires, corrige les déséquilibres posturaux et améliore la mobilité articulaire."
+    duration: "60 min",
+    price: "CHF 120",
+    duration90: "90 min",
+    price90: "CHF 170",
+    description: "Par un examen palpatoire précis, libère les tensions musculaires, corrige les déséquilibres posturaux et améliore la mobilité articulaire.",
+    note: "Anamnèse de 15 minutes comprise dans le prix pour le premier rendez-vous"
   },
   {
     icon: Sparkles,
     title: "Massage classique",
-    duration: "60-90 minutes",
-    description: "Gestes doux et réguliers qui invitent au lâcher-prise total. Un moment de détente absolue pour harmoniser la circulation et apaiser le quotidien."
+    duration: "60 min",
+    price: "CHF 120",
+    duration90: "90 min",
+    price90: "CHF 170",
+    description: "Gestes doux et réguliers qui invitent au lâcher-prise total. Un moment de détente absolue pour harmoniser la circulation et apaiser le quotidien.",
+    note: "Anamnèse de 15 minutes comprise dans le prix pour le premier rendez-vous"
   },
   {
     icon: Activity,
     title: "Massage sportif - récupération",
-    duration: "60 minutes",
+    duration: "60 min",
+    price: "CHF 120",
     description: "Conçu pour aider le corps après l'effort, relâche les tensions, soulage les zones sollicitées et limite les courbatures."
   },
   {
     icon: Baby,
     title: "Massage prénatal",
-    duration: "60 minutes",
+    duration: "60 min",
+    price: "CHF 120",
     description: "Du troisième mois à la fin de la grossesse. Accompagne les changements du corps, soulage les tensions et aide à vivre pleinement ce temps unique."
   },
   {
     icon: Footprints,
     title: "Réflexologie plantaire",
-    duration: "60 minutes",
+    duration: "60 min",
+    price: "CHF 120",
     description: "Stimulation des zones réflexes des pieds pour régulariser les fonctions des organes. Participe aux mécanismes d'auto-défense et d'auto-régénération.",
-    note: "Non pris en charge par les assurances complémentaires"
+    note: "Non prise en charge par les assurances complémentaires"
   }
 ];
 
@@ -74,13 +87,13 @@ const Services = () => {
 
         <Tabs defaultValue="therapy" className="max-w-6xl mx-auto">
           <TabsList className="grid w-full grid-cols-2 mb-12 h-auto gap-2">
-            <TabsTrigger value="therapy" className="text-sm sm:text-base lg:text-lg py-3 px-2 sm:px-4">
-              <span className="hidden sm:inline">Thérapie Somato-Émotionnelle</span>
-              <span className="sm:hidden">Thérapie</span>
+            <TabsTrigger value="therapy" className="text-sm sm:text-base lg:text-lg py-3 px-2 sm:px-4 cursor-pointer hover:bg-primary/20 transition-colors">
+              <span className="hidden sm:inline">👆 Thérapie Somato-Émotionnelle</span>
+              <span className="sm:hidden">👆 Thérapie</span>
             </TabsTrigger>
-            <TabsTrigger value="massage" className="text-sm sm:text-base lg:text-lg py-3 px-2 sm:px-4">
-              <span className="hidden sm:inline">Massothérapie</span>
-              <span className="sm:hidden">Massage</span>
+            <TabsTrigger value="massage" className="text-sm sm:text-base lg:text-lg py-3 px-2 sm:px-4 cursor-pointer hover:bg-primary/20 transition-colors">
+              <span className="hidden sm:inline">👆 Massothérapie</span>
+              <span className="sm:hidden">👆 Massage</span>
             </TabsTrigger>
           </TabsList>
 
@@ -94,13 +107,19 @@ const Services = () => {
                   <div className="flex-grow">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                       <h3 className="text-2xl font-bold text-foreground">{service.title}</h3>
-                      <span className="text-sm text-muted-foreground mt-2 md:mt-0">
-                        {service.duration}
-                      </span>
+                      <div className="flex flex-col items-end mt-2 md:mt-0">
+                        <span className="text-sm text-muted-foreground">{service.duration}</span>
+                        <span className="text-lg font-bold text-primary">{service.price}</span>
+                      </div>
                     </div>
                     <p className="text-muted-foreground mb-6 leading-relaxed">
                       {service.description}
                     </p>
+                    {service.note && (
+                      <p className="text-sm text-destructive/80 italic mb-4">
+                        ⚠️ {service.note}
+                      </p>
+                    )}
                     <div className="space-y-3">
                       <h4 className="font-semibold text-foreground">Pour qui ?</h4>
                       {service.benefits.map((benefit, idx) => (
@@ -151,13 +170,24 @@ const Services = () => {
                     </div>
                     <div className="flex-grow">
                       <h3 className="text-xl font-bold text-foreground mb-1">{service.title}</h3>
-                      <span className="text-sm text-muted-foreground">{service.duration}</span>
+                      <div className="space-y-1">
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm text-muted-foreground">{service.duration}</span>
+                          <span className="font-semibold text-primary">{service.price}</span>
+                        </div>
+                        {service.duration90 && (
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm text-muted-foreground">{service.duration90}</span>
+                            <span className="font-semibold text-primary">{service.price90}</span>
+                          </div>
+                        )}
+                      </div>
                     </div>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                  <p className="text-muted-foreground leading-relaxed mb-3">{service.description}</p>
                   {service.note && (
-                    <p className="text-sm text-destructive/80 italic mt-3">
-                      ⚠️ {service.note}
+                    <p className="text-sm text-muted-foreground/80 italic">
+                      ℹ️ {service.note}
                     </p>
                   )}
                 </Card>
@@ -165,12 +195,39 @@ const Services = () => {
             </div>
 
             <Card className="p-6 bg-gradient-to-br from-sage-light/20 via-primary/10 to-beige/15 border-primary/30 backdrop-blur-sm">
-              <h4 className="font-bold text-foreground mb-2">
-                ✨ Thérapeute agréée ASCA et RME
+              <h4 className="font-bold text-foreground mb-4">
+                ✨ Options supplémentaires
               </h4>
-              <p className="text-muted-foreground">
-                Certaines assurances complémentaires remboursent une partie des séances. 
-                Je vous recommande de vérifier la prise en charge directement auprès de votre caisse.
+              <div className="space-y-3 text-muted-foreground">
+                <div className="flex items-start gap-2">
+                  <span>🎁</span>
+                  <div>
+                    <span className="font-semibold text-foreground">Bons cadeaux disponibles</span>
+                    <p className="text-sm">Offrez un moment de bien-être à vos proches</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span>📋</span>
+                  <div>
+                    <span className="font-semibold text-foreground">Abonnements possibles</span>
+                    <p className="text-sm">Profitez d'un suivi régulier adapté à vos besoins</p>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-6 bg-gradient-to-br from-sage-light/20 via-primary/10 to-beige/15 border-primary/30 backdrop-blur-sm mt-6">
+              <h4 className="font-bold text-foreground mb-2">
+                ✨ Prise en charge par les assurances
+              </h4>
+              <p className="text-muted-foreground mb-3">
+                <strong className="text-foreground">Thérapeute agréée ASCA et RME</strong> - labels de qualité reconnus.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                <strong>ASCA</strong> (Fondation Suisse pour les Médecines Complémentaires) et <strong>RME</strong> (Registre de Médecine Empirique) sont des labels de qualité garantissant une formation professionnelle reconnue.
+              </p>
+              <p className="text-sm text-muted-foreground mt-2">
+                Les massages sont pris en charge par les assurances complémentaires. Je vous recommande de vérifier directement auprès de votre caisse.
               </p>
             </Card>
           </TabsContent>

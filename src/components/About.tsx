@@ -22,8 +22,7 @@ const About = () => {
                 </p>
 
                 <p>
-                  <strong className="text-foreground">C'est à travers mes enfants que ce chemin s'est éclairé.</strong> 
-                  Face à leurs maux, j'ai exploré de nombreuses approches, conventionnelles ou 
+                  <strong className="text-foreground">C'est à travers mes enfants que ce chemin s'est éclairé.</strong> Face à leurs maux, j'ai exploré de nombreuses approches, conventionnelles ou 
                   naturelles, sans toujours trouver les réponses que je cherchais.
                 </p>
 
