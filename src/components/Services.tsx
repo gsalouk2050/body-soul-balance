@@ -177,6 +177,22 @@ const Services = () => {
               ))}
             </div>
 
+            <Card className="p-6 bg-gradient-to-br from-primary/10 via-sage-light/15 to-beige/20 border-primary/30 backdrop-blur-sm">
+              <h4 className="font-bold text-foreground mb-4">
+                💰 Tarif des soins
+              </h4>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-muted-foreground">Soin de 45 minutes</span>
+                  <span className="font-semibold text-foreground">CHF 90.-</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-muted-foreground">Soin de 60 minutes</span>
+                  <span className="font-semibold text-foreground">CHF 130.-</span>
+                </div>
+              </div>
+            </Card>
+
             <Card className="p-6 bg-gradient-to-br from-sage-light/20 via-primary/10 to-beige/15 border-primary/30 backdrop-blur-sm">
               <h4 className="font-bold text-foreground mb-4">
                 ✨ Options supplémentaires
