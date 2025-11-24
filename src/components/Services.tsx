@@ -22,14 +22,12 @@ const massageServices = [
   {
     icon: Activity,
     title: "Massage thérapeutique",
-    description: "Par un examen palpatoire précis, libère les tensions musculaires, corrige les déséquilibres posturaux et améliore la mobilité articulaire.",
-    note: "Anamnèse de 15 minutes comprise pour le premier rendez-vous"
+    description: "Par un examen palpatoire précis, libère les tensions musculaires, corrige les déséquilibres posturaux et améliore la mobilité articulaire."
   },
   {
     icon: Sparkles,
     title: "Massage classique",
-    description: "Gestes doux et réguliers qui invitent au lâcher-prise total. Un moment de détente absolue pour harmoniser la circulation et apaiser le quotidien.",
-    note: "Anamnèse de 15 minutes comprise pour le premier rendez-vous"
+    description: "Gestes doux et réguliers qui invitent au lâcher-prise total. Un moment de détente absolue pour harmoniser la circulation et apaiser le quotidien."
   },
   {
     icon: Activity,
