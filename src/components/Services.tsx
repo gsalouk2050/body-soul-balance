@@ -190,6 +190,14 @@ const Services = () => {
                   <span className="text-muted-foreground">Soin de 60 minutes</span>
                   <span className="font-semibold text-foreground">CHF 130.-</span>
                 </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-muted-foreground">Soin de 90 minutes</span>
+                  <span className="font-semibold text-foreground">CHF 180.-</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-muted-foreground">Soin de 120 minutes</span>
+                  <span className="font-semibold text-foreground">CHF 230.-</span>
+                </div>
               </div>
             </Card>
 
