@@ -156,6 +156,9 @@ const Services = () => {
                   <span className="font-semibold text-foreground">CHF 230.-</span>
                 </div>
               </div>
+              <p className="text-sm text-muted-foreground mt-4 italic">
+                ℹ️ La première séance nécessite un bilan complet et doit obligatoirement être en 90 minutes
+              </p>
             </Card>
           </TabsContent>
 
@@ -206,6 +209,9 @@ const Services = () => {
                   <span className="font-semibold text-foreground">CHF 230.-</span>
                 </div>
               </div>
+              <p className="text-sm text-muted-foreground mt-4 italic">
+                ℹ️ La première séance nécessite un bilan complet et doit obligatoirement être en 90 minutes
+              </p>
             </Card>
 
             <Card className="p-6 bg-gradient-to-br from-sage-light/20 via-primary/10 to-beige/15 border-primary/30 backdrop-blur-sm">
