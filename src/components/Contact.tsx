@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Bus } from "lucide-react";
+import { MapPin, Phone, Bus, Clock } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -71,6 +71,22 @@ const Contact = () => {
                     <p className="text-muted-foreground">
                       Arrêt de bus : Rue des Eaux-Vives<br />
                       Ligne 2
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Clock className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-2">Horaires</h4>
+                    <p className="text-muted-foreground">
+                      Lundi : 9h-19h<br />
+                      Mardi : 8h-15h<br />
+                      Jeudi : 8h-15h<br />
+                      Vendredi : 9h-19h<br />
+                      Samedi : 8h-16h
                     </p>
                   </div>
                 </div>
