@@ -133,6 +133,30 @@ const Services = () => {
                 </div>
               </div>
             </Card>
+
+            <Card className="p-6 bg-gradient-to-br from-primary/10 via-sage-light/15 to-beige/20 border-primary/30 backdrop-blur-sm">
+              <h4 className="font-bold text-foreground mb-4">
+                Tarif des soins
+              </h4>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-muted-foreground">45 minutes</span>
+                  <span className="font-semibold text-foreground">CHF 90.-</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-muted-foreground">60 minutes</span>
+                  <span className="font-semibold text-foreground">CHF 130.-</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-muted-foreground">90 minutes</span>
+                  <span className="font-semibold text-foreground">CHF 180.-</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-muted-foreground">120 minutes</span>
+                  <span className="font-semibold text-foreground">CHF 230.-</span>
+                </div>
+              </div>
+            </Card>
           </TabsContent>
 
           <TabsContent value="massage" className="space-y-6">
