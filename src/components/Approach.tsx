@@ -79,12 +79,6 @@ const Approach = () => {
           </Card>
         </div>
 
-        <div className="max-w-3xl mx-auto mt-12 text-center">
-          <p className="text-lg text-muted-foreground italic">
-            "Le toucher thérapeutique est une méthode puissante qui renforce la relation de confiance, 
-            créant un espace de sécurité, d'écoute et de lâcher-prise."
-          </p>
-        </div>
       </div>
     </section>
   );
