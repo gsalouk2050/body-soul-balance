@@ -43,8 +43,8 @@ const Header = () => {
               <img src={logoIcon} alt="DCG Logo" className="w-full h-full object-contain" />
             </div>
             <div>
-              <h1 className="text-lg font-bold text-foreground">DCG</h1>
-              <p className="text-xs text-muted-foreground">Thérapie psychocorporelle</p>
+              <h1 className="text-lg font-bold text-foreground">DCG Sandrine</h1>
+              <p className="text-xs text-muted-foreground">Massathératie & Thérapie psychocorporelle</p>
             </div>
           </div>
 
