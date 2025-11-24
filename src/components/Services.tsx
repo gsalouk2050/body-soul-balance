@@ -8,7 +8,6 @@ const therapyServices = [
     icon: HandHeart,
     title: "Thérapie Somato-Émotionnelle",
     duration: "90 minutes (première séance)",
-    price: "CHF 150",
     description: "Libération profonde des tensions et blocages émotionnels inscrits dans le corps.",
     note: "Non prise en charge par les assurances complémentaires",
     benefits: [
@@ -25,41 +24,34 @@ const massageServices = [
     icon: Activity,
     title: "Massage thérapeutique",
     duration: "60 min",
-    price: "CHF 120",
     duration90: "90 min",
-    price90: "CHF 170",
     description: "Par un examen palpatoire précis, libère les tensions musculaires, corrige les déséquilibres posturaux et améliore la mobilité articulaire.",
-    note: "Anamnèse de 15 minutes comprise dans le prix pour le premier rendez-vous"
+    note: "Anamnèse de 15 minutes comprise pour le premier rendez-vous"
   },
   {
     icon: Sparkles,
     title: "Massage classique",
     duration: "60 min",
-    price: "CHF 120",
     duration90: "90 min",
-    price90: "CHF 170",
     description: "Gestes doux et réguliers qui invitent au lâcher-prise total. Un moment de détente absolue pour harmoniser la circulation et apaiser le quotidien.",
-    note: "Anamnèse de 15 minutes comprise dans le prix pour le premier rendez-vous"
+    note: "Anamnèse de 15 minutes comprise pour le premier rendez-vous"
   },
   {
     icon: Activity,
     title: "Massage sportif - récupération",
     duration: "60 min",
-    price: "CHF 120",
     description: "Conçu pour aider le corps après l'effort, relâche les tensions, soulage les zones sollicitées et limite les courbatures."
   },
   {
     icon: Baby,
     title: "Massage prénatal",
     duration: "60 min",
-    price: "CHF 120",
     description: "Du troisième mois à la fin de la grossesse. Accompagne les changements du corps, soulage les tensions et aide à vivre pleinement ce temps unique."
   },
   {
     icon: Footprints,
     title: "Réflexologie plantaire",
     duration: "60 min",
-    price: "CHF 120",
     description: "Stimulation des zones réflexes des pieds pour régulariser les fonctions des organes. Participe aux mécanismes d'auto-défense et d'auto-régénération.",
     note: "Non prise en charge par les assurances complémentaires"
   }
@@ -107,10 +99,7 @@ const Services = () => {
                   <div className="flex-grow">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                       <h3 className="text-2xl font-bold text-foreground">{service.title}</h3>
-                      <div className="flex flex-col items-end mt-2 md:mt-0">
-                        <span className="text-sm text-muted-foreground">{service.duration}</span>
-                        <span className="text-lg font-bold text-primary">{service.price}</span>
-                      </div>
+                      <span className="text-sm text-muted-foreground mt-2 md:mt-0">{service.duration}</span>
                     </div>
                     <p className="text-muted-foreground mb-6 leading-relaxed">
                       {service.description}
@@ -171,15 +160,9 @@ const Services = () => {
                     <div className="flex-grow">
                       <h3 className="text-xl font-bold text-foreground mb-1">{service.title}</h3>
                       <div className="space-y-1">
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm text-muted-foreground">{service.duration}</span>
-                          <span className="font-semibold text-primary">{service.price}</span>
-                        </div>
+                        <span className="text-sm text-muted-foreground">{service.duration}</span>
                         {service.duration90 && (
-                          <div className="flex justify-between items-center">
-                            <span className="text-sm text-muted-foreground">{service.duration90}</span>
-                            <span className="font-semibold text-primary">{service.price90}</span>
-                          </div>
+                          <span className="text-sm text-muted-foreground block">{service.duration90}</span>
                         )}
                       </div>
                     </div>

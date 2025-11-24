@@ -108,14 +108,14 @@ const Rdv = () => {
                     className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                   >
                     <option value="">Sélectionnez un service</option>
-                    <option value="somato">Thérapie Somato-Émotionnelle (90 min - CHF 150)</option>
-                    <option value="therapeutique-60">Massage thérapeutique (60 min - CHF 120)</option>
-                    <option value="therapeutique-90">Massage thérapeutique (90 min - CHF 170)</option>
-                    <option value="classique-60">Massage classique (60 min - CHF 120)</option>
-                    <option value="classique-90">Massage classique (90 min - CHF 170)</option>
-                    <option value="sportif">Massage sportif (60 min - CHF 120)</option>
-                    <option value="prenatal">Massage prénatal (60 min - CHF 120)</option>
-                    <option value="reflexologie">Réflexologie plantaire (60 min - CHF 120)</option>
+                    <option value="somato">Thérapie Somato-Émotionnelle (90 min)</option>
+                    <option value="therapeutique-60">Massage thérapeutique (60 min)</option>
+                    <option value="therapeutique-90">Massage thérapeutique (90 min)</option>
+                    <option value="classique-60">Massage classique (60 min)</option>
+                    <option value="classique-90">Massage classique (90 min)</option>
+                    <option value="sportif">Massage sportif (60 min)</option>
+                    <option value="prenatal">Massage prénatal (60 min)</option>
+                    <option value="reflexologie">Réflexologie plantaire (60 min)</option>
                   </select>
                 </div>
 
