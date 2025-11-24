@@ -11,7 +11,7 @@ const Footer = () => {
               <img src={logoIcon} alt="DCG Logo" className="w-full h-full object-contain" />
             </div>
             <h3 className="text-2xl font-bold mb-2">DCG Sandrine</h3>
-            <p className="text-beige">Massathératie & Thérapie psychocorporelle</p>
+            <p className="text-beige">Massothérapie & Thérapie psychocorporelle</p>
           </div>
           
           <div className="mb-8 text-cream/80 max-w-2xl mx-auto">
