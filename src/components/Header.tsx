@@ -44,7 +44,7 @@ const Header = () => {
             </div>
             <div>
               <h1 className="text-lg font-bold text-foreground">DCG Sandrine</h1>
-              <p className="text-xs text-muted-foreground">Massathératie & Thérapie psychocorporelle</p>
+              <p className="text-xs text-muted-foreground">Massothérapie & Thérapie psychocorporelle</p>
             </div>
           </div>
 
