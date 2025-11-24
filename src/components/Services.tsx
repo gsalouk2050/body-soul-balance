@@ -179,7 +179,7 @@ const Services = () => {
 
             <Card className="p-6 bg-gradient-to-br from-primary/10 via-sage-light/15 to-beige/20 border-primary/30 backdrop-blur-sm">
               <h4 className="font-bold text-foreground mb-4">
-                💰 Tarif des soins
+                Tarif des soins
               </h4>
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
