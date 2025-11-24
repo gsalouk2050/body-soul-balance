@@ -63,7 +63,7 @@ const Services = () => {
             Services & Soins
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Un accompagnement personnalisé pour retrouver l'équilibre entre le corps et l'esprit.
+            Un suivi personnalisé pour retrouver l'équilibre entre le corps et l'esprit.
           </p>
         </div>
 
