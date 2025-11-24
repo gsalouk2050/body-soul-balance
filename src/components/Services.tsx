@@ -157,7 +157,7 @@ const Services = () => {
                 </div>
               </div>
               <p className="text-sm text-muted-foreground mt-4 italic">
-                ℹ️ La première séance nécessite un bilan complet et doit obligatoirement être en 90 minutes, les séances suivantes peuvent être de 45 minutes.
+                ℹ️ La première séance nécessite un bilan complet et doit obligatoirement être en 90 minutes.
               </p>
             </Card>
           </TabsContent>
@@ -210,7 +210,7 @@ const Services = () => {
                 </div>
               </div>
               <p className="text-sm text-muted-foreground mt-4 italic">
-                ℹ️ La première séance nécessite un bilan complet et doit obligatoirement être en 90 minutes, les séances suivantes peuvent être de 45 minutes.
+                ℹ️ La première séance nécessite un bilan complet et doit obligatoirement être en 90 minutes.
               </p>
             </Card>
 
