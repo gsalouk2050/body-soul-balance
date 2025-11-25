@@ -156,14 +156,14 @@ const Services = () => {
               </div>
               <div className="mt-6 pt-4 border-t border-primary/20">
                 <h5 className="font-semibold text-foreground mb-3">Services à domicile</h5>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between items-center">
+                <div className="space-y-3 text-sm">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
                     <span className="text-muted-foreground">Rive, Eaux-Vives, Terrassière</span>
-                    <span className="font-semibold text-foreground">+ CHF 50.-</span>
+                    <span className="font-semibold text-foreground whitespace-nowrap">+ CHF 50.-</span>
                   </div>
-                  <div className="flex justify-between items-center">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
                     <span className="text-muted-foreground">Champel, Thônex, Chêne-Bourgeries, Chêne-Bourg, Veyrier</span>
-                    <span className="font-semibold text-foreground">+ CHF 80.-</span>
+                    <span className="font-semibold text-foreground whitespace-nowrap">+ CHF 80.-</span>
                   </div>
                 </div>
               </div>
@@ -222,14 +222,14 @@ const Services = () => {
               </div>
               <div className="mt-6 pt-4 border-t border-primary/20">
                 <h5 className="font-semibold text-foreground mb-3">Services à domicile</h5>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between items-center">
+                <div className="space-y-3 text-sm">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
                     <span className="text-muted-foreground">Rive, Eaux-Vives, Terrassière</span>
-                    <span className="font-semibold text-foreground">+ CHF 50.-</span>
+                    <span className="font-semibold text-foreground whitespace-nowrap">+ CHF 50.-</span>
                   </div>
-                  <div className="flex justify-between items-center">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
                     <span className="text-muted-foreground">Champel, Thônex, Chêne-Bourgeries, Chêne-Bourg, Veyrier</span>
-                    <span className="font-semibold text-foreground">+ CHF 80.-</span>
+                    <span className="font-semibold text-foreground whitespace-nowrap">+ CHF 80.-</span>
                   </div>
                 </div>
               </div>
