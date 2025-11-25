@@ -154,6 +154,19 @@ const Services = () => {
                   <span className="font-semibold text-foreground">CHF 230.-</span>
                 </div>
               </div>
+              <div className="mt-6 pt-4 border-t border-primary/20">
+                <h5 className="font-semibold text-foreground mb-3">Services à domicile</h5>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground">Rive, Eaux-Vives, Terrassière</span>
+                    <span className="font-semibold text-foreground">+ CHF 50.-</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground">Champel, Thônex, Chêne-Bourgeries, Chêne-Bourg, Veyrier</span>
+                    <span className="font-semibold text-foreground">+ CHF 80.-</span>
+                  </div>
+                </div>
+              </div>
               <p className="text-sm text-muted-foreground mt-4 italic">
                 ℹ️ La première séance nécessite un bilan complet et doit obligatoirement être en 90 minutes.
               </p>
@@ -207,6 +220,19 @@ const Services = () => {
                   <span className="font-semibold text-foreground">CHF 230.-</span>
                 </div>
               </div>
+              <div className="mt-6 pt-4 border-t border-primary/20">
+                <h5 className="font-semibold text-foreground mb-3">Services à domicile</h5>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground">Rive, Eaux-Vives, Terrassière</span>
+                    <span className="font-semibold text-foreground">+ CHF 50.-</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground">Champel, Thônex, Chêne-Bourgeries, Chêne-Bourg, Veyrier</span>
+                    <span className="font-semibold text-foreground">+ CHF 80.-</span>
+                  </div>
+                </div>
+              </div>
               <p className="text-sm text-muted-foreground mt-4 italic">
                 ℹ️ La première séance nécessite un bilan complet et doit obligatoirement être en 90 minutes.
               </p>
@@ -239,13 +265,13 @@ const Services = () => {
                 ✨ Prise en charge par les assurances
               </h4>
               <p className="text-muted-foreground mb-3">
-                <strong className="text-foreground">Thérapeute agréée ASCA et RME</strong> - labels de qualité reconnus.
+                <strong className="text-foreground">Démarches d'agrément ASCA et RME en cours.</strong>
               </p>
               <p className="text-sm text-muted-foreground">
                 <strong>ASCA</strong> (Fondation Suisse pour les Médecines Complémentaires) et <strong>RME</strong> (Registre de Médecine Empirique) sont des labels de qualité garantissant une formation professionnelle reconnue.
               </p>
               <p className="text-sm text-muted-foreground mt-2">
-                Les massages sont pris en charge par les assurances complémentaires. Je vous recommande de vérifier directement auprès de votre caisse.
+                Une fois les agréments obtenus, les massages pourront être pris en charge par les assurances complémentaires.
               </p>
             </Card>
           </TabsContent>
