@@ -42,7 +42,7 @@ const Contact = () => {
                       <h4 className="font-semibold text-foreground mb-2">Email</h4>
                       <a
                         href="mailto:contact@dcg-therapie-psychocorporelle.ch"
-                        className="text-primary hover:underline break-all"
+                        className="text-primary hover:underline text-sm sm:text-base"
                       >
                         contact@dcg-therapie-psychocorporelle.ch
                       </a>
