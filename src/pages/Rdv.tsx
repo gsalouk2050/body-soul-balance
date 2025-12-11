@@ -189,11 +189,11 @@ const Rdv = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Horaires</h3>
                       <p className="text-muted-foreground">
-                        Lundi : 9h-19h<br />
-                        Mardi : 8h-15h<br />
-                        Jeudi : 8h-15h<br />
+                        Lundi : 8h-16h<br />
+                        Jeudi : 9h-19h<br />
                         Vendredi : 9h-19h<br />
-                        Samedi : 8h-16h
+                        Samedi : 8h-14h<br />
+                        <span className="text-sm italic">Autres à domicile sur demande</span>
                       </p>
                     </div>
                   </div>
