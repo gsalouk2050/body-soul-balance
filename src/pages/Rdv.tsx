@@ -193,8 +193,7 @@ const Rdv = () => {
                         Mardi : uniquement à domicile<br />
                         Jeudi : 9h-19h<br />
                         Vendredi : 9h-19h<br />
-                        Samedi : 8h-14h<br />
-                        <span className="text-sm italic">Autres à domicile sur demande</span>
+                        Samedi : 8h-14h
                       </p>
                     </div>
                   </div>
