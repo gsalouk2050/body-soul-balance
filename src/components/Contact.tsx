@@ -92,6 +92,7 @@ const Contact = () => {
                     <h4 className="font-semibold text-foreground mb-2">Horaires</h4>
                     <p className="text-muted-foreground">
                       Lundi : 8h-16h<br />
+                      Mardi : uniquement à domicile<br />
                       Jeudi : 9h-19h<br />
                       Vendredi : 9h-19h<br />
                       Samedi : 8h-14h<br />
