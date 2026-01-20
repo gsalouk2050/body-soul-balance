@@ -2,13 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Leaf } from "lucide-react";
 import heroImage from "@/assets/hero-therapy.jpg";
 
+const ONEDOC_URL = "https://onedoc.ch/fr/widget/6a970205d36d11ab5603d6631a5c3524c3a692408e276252632ad1ce9d6f0a47";
+
 const Hero = () => {
-  const scrollToContact = () => {
-    const element = document.getElementById("contact");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   const scrollToApproach = () => {
     const element = document.getElementById("approche");
@@ -41,8 +37,10 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3 mb-8">
-            <Button onClick={scrollToContact} size="lg" className="text-base md:text-lg px-6 md:px-8">
-              Prendre rendez-vous
+            <Button asChild size="lg" className="text-base md:text-lg px-6 md:px-8">
+              <a href={ONEDOC_URL} target="_blank" rel="noopener noreferrer">
+                Prendre rendez-vous
+              </a>
             </Button>
             <Button 
               onClick={scrollToApproach}

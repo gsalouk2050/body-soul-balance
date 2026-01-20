@@ -59,9 +59,11 @@ const Header = () => {
                 {item.label}
               </button>
             ))}
-            <Button onClick={() => scrollToSection("contact")} variant="default" size="sm">
-              <Phone className="w-4 h-4 mr-2" />
-              Prendre RDV
+            <Button asChild variant="default" size="sm">
+              <a href="https://onedoc.ch/fr/widget/6a970205d36d11ab5603d6631a5c3524c3a692408e276252632ad1ce9d6f0a47" target="_blank" rel="noopener noreferrer">
+                <Phone className="w-4 h-4 mr-2" />
+                Prendre RDV
+              </a>
             </Button>
           </nav>
 
@@ -86,9 +88,11 @@ const Header = () => {
                 {item.label}
               </button>
             ))}
-            <Button onClick={() => scrollToSection("contact")} className="w-full">
-              <Phone className="w-4 h-4 mr-2" />
-              Prendre RDV
+            <Button asChild className="w-full">
+              <a href="https://onedoc.ch/fr/widget/6a970205d36d11ab5603d6631a5c3524c3a692408e276252632ad1ce9d6f0a47" target="_blank" rel="noopener noreferrer">
+                <Phone className="w-4 h-4 mr-2" />
+                Prendre RDV
+              </a>
             </Button>
           </nav>
         )}
