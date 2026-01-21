@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Bus, Clock } from "lucide-react";
-
+import logoAsca from "@/assets/logo-asca.jpeg";
 const Contact = () => {
   return (
     <section id="contact" className="py-24 bg-gradient-to-br from-primary/10 via-sage-light/30 to-beige/25">
@@ -135,17 +135,13 @@ const Contact = () => {
             </Card>
           </div>
 
-          <Card className="mt-8 p-6 bg-gradient-to-br from-sage-light/20 via-primary/10 to-beige/15 border-primary/30 backdrop-blur-sm">
-            <p className="text-center text-muted-foreground mb-3">
-              <strong className="text-foreground">Démarches d'agrément ASCA et RME en cours.</strong>
-            </p>
-            <p className="text-sm text-center text-muted-foreground mb-2">
-              <strong>ASCA</strong> (Fondation Suisse pour les Médecines Complémentaires) et <strong>RME</strong> (Registre de Médecine Empirique) sont des labels de qualité qui garantissent une formation professionnelle reconnue.
-            </p>
-            <p className="text-sm text-center text-muted-foreground">
-              Une fois les agréments obtenus, les massages pourront être pris en charge par les assurances complémentaires.
-            </p>
-          </Card>
+          <div className="mt-8 flex justify-center">
+            <img 
+              src={logoAsca} 
+              alt="Thérapeute agréé ASCA - Fondation suisse pour les médecines complémentaires" 
+              className="h-20 sm:h-24 object-contain"
+            />
+          </div>
         </div>
       </div>
     </section>
