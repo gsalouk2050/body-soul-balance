@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Bus, Clock } from "lucide-react";
-import logoAsca from "@/assets/logo-asca.jpeg";
+import logoAsca from "@/assets/logo-asca.png";
 const Contact = () => {
   return (
     <section id="contact" className="py-24 bg-gradient-to-br from-primary/10 via-sage-light/30 to-beige/25">
