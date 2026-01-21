@@ -8,7 +8,6 @@ const therapyServices = [
     icon: HandHeart,
     title: "Thérapie Somato-Émotionnelle",
     description: "Libération profonde des tensions et blocages émotionnels inscrits dans le corps.",
-    note: "Non prise en charge par les assurances complémentaires",
     benefits: [
       "Comprendre le sens de vos tensions et blocages",
       "Retrouver une sécurité intérieure",
@@ -91,11 +90,6 @@ const Services = () => {
                     <p className="text-muted-foreground mb-6 leading-relaxed">
                       {service.description}
                     </p>
-                    {service.note && (
-                      <p className="text-sm text-destructive/80 italic mb-4">
-                        ⚠️ {service.note}
-                      </p>
-                    )}
                     <div className="space-y-3">
                       <h4 className="font-semibold text-foreground">Pour qui ?</h4>
                       {service.benefits.map((benefit, idx) => (
