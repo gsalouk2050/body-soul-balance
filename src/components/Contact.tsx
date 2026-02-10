@@ -14,9 +14,6 @@ const Contact = () => {
             <p className="text-lg text-muted-foreground mb-4">
               Je serai heureuse de vous accompagner dans votre cheminement vers l'équilibre.
             </p>
-            <p className="text-muted-foreground italic">
-              📋 Une fiche de renseignements vous sera envoyée avant votre premier rendez-vous
-            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">

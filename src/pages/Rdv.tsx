@@ -138,9 +138,6 @@ const Rdv = () => {
                   Envoyer ma demande
                 </Button>
 
-                <p className="text-sm text-muted-foreground text-center mt-4">
-                  📋 Une fiche de renseignements vous sera envoyée après confirmation
-                </p>
               </form>
             </Card>
 
