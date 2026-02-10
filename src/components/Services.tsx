@@ -250,16 +250,13 @@ const Services = () => {
 
             <Card className="p-6 bg-gradient-to-br from-sage-light/20 via-primary/10 to-beige/15 border-primary/30 backdrop-blur-sm mt-6">
               <h4 className="font-bold text-foreground mb-2">
-                ✨ Prise en charge par les assurances
+                ✨ Prise en charge par certaines assurances complémentaires
               </h4>
               <p className="text-muted-foreground mb-3">
-                <strong className="text-foreground">Démarches d'agrément ASCA et RME en cours.</strong>
+                <strong className="text-foreground">Agréée ASCA.</strong>
               </p>
               <p className="text-sm text-muted-foreground">
-                <strong>ASCA</strong> (Fondation Suisse pour les Médecines Complémentaires) et <strong>RME</strong> (Registre de Médecine Empirique) sont des labels de qualité garantissant une formation professionnelle reconnue.
-              </p>
-              <p className="text-sm text-muted-foreground mt-2">
-                Une fois les agréments obtenus, les massages pourront être pris en charge par les assurances complémentaires.
+                <strong>ASCA</strong> (Fondation Suisse pour les Médecines Complémentaires) est un label de qualité garantissant une formation professionnelle reconnue.
               </p>
             </Card>
           </TabsContent>
