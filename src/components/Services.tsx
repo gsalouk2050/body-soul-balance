@@ -148,9 +148,6 @@ const Services = () => {
                   <span className="font-semibold text-foreground">CHF 230.-</span>
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground mt-4 italic">
-                ℹ️ La première séance nécessite un bilan complet et doit obligatoirement être en 90 minutes.
-              </p>
               <div className="mt-6 pt-4 border-t border-primary/20">
                 <h5 className="font-semibold text-foreground mb-3">Services à domicile</h5>
                 <div className="space-y-3 text-sm">
@@ -214,9 +211,6 @@ const Services = () => {
                   <span className="font-semibold text-foreground">CHF 230.-</span>
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground mt-4 italic">
-                ℹ️ La première séance nécessite un bilan complet et doit obligatoirement être en 90 minutes.
-              </p>
               <div className="mt-6 pt-4 border-t border-primary/20">
                 <h5 className="font-semibold text-foreground mb-3">Services à domicile</h5>
                 <div className="space-y-3 text-sm">
