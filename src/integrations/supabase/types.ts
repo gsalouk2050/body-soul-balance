@@ -14,7 +14,135 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      analytics_daily: {
+        Row: {
+          created_at: string
+          date: string
+          id: string
+          pageviews: number
+          visitors: number
+        }
+        Insert: {
+          created_at?: string
+          date: string
+          id?: string
+          pageviews?: number
+          visitors?: number
+        }
+        Update: {
+          created_at?: string
+          date?: string
+          id?: string
+          pageviews?: number
+          visitors?: number
+        }
+        Relationships: []
+      }
+      analytics_geo: {
+        Row: {
+          country: string
+          id: string
+          percentage: number
+          region: string | null
+          updated_at: string
+          visitors: number
+        }
+        Insert: {
+          country: string
+          id?: string
+          percentage?: number
+          region?: string | null
+          updated_at?: string
+          visitors?: number
+        }
+        Update: {
+          country?: string
+          id?: string
+          percentage?: number
+          region?: string | null
+          updated_at?: string
+          visitors?: number
+        }
+        Relationships: []
+      }
+      analytics_kpis: {
+        Row: {
+          id: string
+          key: string
+          label: string | null
+          updated_at: string
+          value: number
+        }
+        Insert: {
+          id?: string
+          key: string
+          label?: string | null
+          updated_at?: string
+          value?: number
+        }
+        Update: {
+          id?: string
+          key?: string
+          label?: string | null
+          updated_at?: string
+          value?: number
+        }
+        Relationships: []
+      }
+      analytics_monthly: {
+        Row: {
+          created_at: string
+          id: string
+          is_partial: boolean
+          month_label: string
+          pageviews: number
+          updated_at: string
+          visitors: number
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          is_partial?: boolean
+          month_label: string
+          pageviews?: number
+          updated_at?: string
+          visitors?: number
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          is_partial?: boolean
+          month_label?: string
+          pageviews?: number
+          updated_at?: string
+          visitors?: number
+        }
+        Relationships: []
+      }
+      analytics_top_days: {
+        Row: {
+          date: string
+          id: string
+          pageviews: number
+          updated_at: string
+          visitors: number
+        }
+        Insert: {
+          date: string
+          id?: string
+          pageviews?: number
+          updated_at?: string
+          visitors?: number
+        }
+        Update: {
+          date?: string
+          id?: string
+          pageviews?: number
+          updated_at?: string
+          visitors?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
