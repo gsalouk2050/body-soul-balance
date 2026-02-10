@@ -1,78 +1,115 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, Eye, BarChart3, ArrowLeft, TrendingUp } from "lucide-react";
+import { Users, Eye, BarChart3, ArrowLeft, TrendingUp, Globe, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import { BarChart, Bar, XAxis, YAxis, LineChart, Line, Area, AreaChart } from "recharts";
-
-// Données réelles du site (analytics Lovable)
-const monthlyData = [
-  { month: "Nov 25", visiteurs: 129, pages: 214 },
-  { month: "Déc 25", visiteurs: 109, pages: 149 },
-  { month: "Jan 26", visiteurs: 231, pages: 307 },
-  { month: "Fév 26", visiteurs: 55, pages: 67 },
-];
-
-const dailyDataJan = [
-  { jour: "1", visiteurs: 3 },
-  { jour: "3", visiteurs: 3 },
-  { jour: "4", visiteurs: 9 },
-  { jour: "5", visiteurs: 21 },
-  { jour: "6", visiteurs: 9 },
-  { jour: "8", visiteurs: 13 },
-  { jour: "9", visiteurs: 16 },
-  { jour: "11", visiteurs: 10 },
-  { jour: "12", visiteurs: 7 },
-  { jour: "13", visiteurs: 8 },
-  { jour: "14", visiteurs: 18 },
-  { jour: "15", visiteurs: 6 },
-  { jour: "16", visiteurs: 4 },
-  { jour: "18", visiteurs: 4 },
-  { jour: "19", visiteurs: 4 },
-  { jour: "20", visiteurs: 7 },
-  { jour: "21", visiteurs: 6 },
-  { jour: "23", visiteurs: 11 },
-  { jour: "24", visiteurs: 12 },
-  { jour: "25", visiteurs: 6 },
-  { jour: "26", visiteurs: 7 },
-  { jour: "28", visiteurs: 10 },
-  { jour: "29", visiteurs: 7 },
-  { jour: "31", visiteurs: 15 },
-];
-
-const dailyDataFeb = [
-  { jour: "1", visiteurs: 6 },
-  { jour: "2", visiteurs: 6 },
-  { jour: "3", visiteurs: 6 },
-  { jour: "4", visiteurs: 5 },
-  { jour: "5", visiteurs: 4 },
-  { jour: "6", visiteurs: 10 },
-  { jour: "7", visiteurs: 5 },
-  { jour: "8", visiteurs: 2 },
-  { jour: "9", visiteurs: 4 },
-  { jour: "10", visiteurs: 7 },
-];
-
-const topDays = [
-  { date: "25 Nov 2025", visiteurs: 33, pages: 52 },
-  { date: "26 Nov 2025", visiteurs: 32, pages: 39 },
-  { date: "5 Jan 2026", visiteurs: 21, pages: 33 },
-  { date: "14 Jan 2026", visiteurs: 18, pages: 24 },
-  { date: "19 Déc 2025", visiteurs: 16, pages: 23 },
-  { date: "9 Jan 2026", visiteurs: 16, pages: 18 },
-  { date: "14 Nov 2025", visiteurs: 15, pages: 34 },
-  { date: "31 Jan 2026", visiteurs: 15, pages: 19 },
-];
+import { BarChart, Bar, XAxis, YAxis, AreaChart, Area, LineChart, Line, PieChart, Pie, Cell } from "recharts";
+import { useAnalyticsData } from "@/hooks/useAnalyticsData";
 
 const chartConfig = {
   visiteurs: { label: "Visiteurs", color: "hsl(var(--primary))" },
   pages: { label: "Pages vues", color: "hsl(var(--accent))" },
 };
 
+const GEO_COLORS = [
+  "hsl(var(--primary))",
+  "hsl(var(--primary) / 0.8)",
+  "hsl(var(--primary) / 0.6)",
+  "hsl(var(--primary) / 0.4)",
+  "hsl(var(--accent))",
+  "hsl(var(--accent) / 0.8)",
+  "hsl(var(--accent) / 0.6)",
+  "hsl(var(--accent) / 0.4)",
+  "hsl(var(--muted-foreground) / 0.6)",
+  "hsl(var(--muted-foreground) / 0.4)",
+];
+
 const Dashboard = () => {
+  const { monthly, daily, geo, topDays, kpis, isLoading } = useAnalyticsData();
+
+  const getKpi = (key: string) => {
+    const item = kpis.data?.find((k: any) => k.key === key);
+    return item?.value ?? 0;
+  };
+
+  const monthlyData = (monthly.data ?? []).map((m: any) => ({
+    month: m.month_label,
+    visiteurs: m.visitors,
+    pages: m.pageviews,
+    is_partial: m.is_partial,
+  }));
+
+  const now = new Date();
+  const currentMonth = now.getMonth() + 1;
+  const currentYear = now.getFullYear();
+
+  const dailyDataJan = (daily.data ?? [])
+    .filter((d: any) => {
+      const date = new Date(d.date);
+      return date.getMonth() === 0 && date.getFullYear() === 2026;
+    })
+    .map((d: any) => ({
+      jour: new Date(d.date).getDate().toString(),
+      visiteurs: d.visitors,
+    }));
+
+  const dailyDataCurrentMonth = (daily.data ?? [])
+    .filter((d: any) => {
+      const date = new Date(d.date);
+      return date.getMonth() === currentMonth - 1 && date.getFullYear() === currentYear;
+    })
+    .map((d: any) => ({
+      jour: new Date(d.date).getDate().toString(),
+      visiteurs: d.visitors,
+    }));
+
+  const geoData = (geo.data ?? []).map((g: any) => ({
+    name: g.region ? `${g.country} – ${g.region}` : g.country,
+    country: g.country,
+    region: g.region,
+    visitors: g.visitors,
+    percentage: Number(g.percentage),
+  }));
+
+  // Group geo by country for pie chart
+  const geoByCountry: Record<string, number> = {};
+  (geo.data ?? []).forEach((g: any) => {
+    geoByCountry[g.country] = (geoByCountry[g.country] || 0) + g.visitors;
+  });
+  const pieData = Object.entries(geoByCountry).map(([country, visitors]) => ({
+    name: country,
+    value: visitors,
+  }));
+
+  const topDaysData = (topDays.data ?? []).map((d: any) => ({
+    date: d.date,
+    visiteurs: d.visitors,
+    pages: d.pageviews,
+  }));
+
+  const lastUpdated = kpis.data?.[0]?.updated_at
+    ? new Date(kpis.data[0].updated_at).toLocaleDateString("fr-FR", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      })
+    : "—";
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <p className="text-muted-foreground">Chargement des statistiques…</p>
+      </div>
+    );
+  }
+
+  const currentMonthName = now.toLocaleDateString("fr-FR", { month: "long", year: "numeric" });
+
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-8">
@@ -82,7 +119,9 @@ const Dashboard = () => {
           </Link>
           <div>
             <h1 className="text-3xl font-bold text-foreground">Tableau de bord</h1>
-            <p className="text-muted-foreground">Statistiques réelles — DCG Sandrine · depuis le 14 nov. 2025</p>
+            <p className="text-muted-foreground">
+              Statistiques réelles — DCG Sandrine · mise à jour auto chaque nuit
+            </p>
           </div>
         </div>
 
@@ -95,7 +134,7 @@ const Dashboard = () => {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Visiteurs uniques</p>
-                <p className="text-2xl font-bold">524</p>
+                <p className="text-2xl font-bold">{getKpi("total_visitors")}</p>
                 <p className="text-xs text-muted-foreground">Total depuis le lancement</p>
               </div>
             </CardContent>
@@ -107,7 +146,7 @@ const Dashboard = () => {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Pages vues</p>
-                <p className="text-2xl font-bold">737</p>
+                <p className="text-2xl font-bold">{getKpi("total_pageviews")}</p>
                 <p className="text-xs text-muted-foreground">Total depuis le lancement</p>
               </div>
             </CardContent>
@@ -119,7 +158,7 @@ const Dashboard = () => {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Pages / visite</p>
-                <p className="text-2xl font-bold">1.41</p>
+                <p className="text-2xl font-bold">{getKpi("pages_per_visit")}</p>
                 <p className="text-xs text-muted-foreground">Moyenne globale</p>
               </div>
             </CardContent>
@@ -131,7 +170,7 @@ const Dashboard = () => {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Meilleur mois</p>
-                <p className="text-2xl font-bold">231</p>
+                <p className="text-2xl font-bold">{getKpi("best_month_visitors")}</p>
                 <p className="text-xs text-muted-foreground">Janvier 2026</p>
               </div>
             </CardContent>
@@ -154,7 +193,6 @@ const Dashboard = () => {
                   <Bar dataKey="pages" fill="hsl(var(--accent))" radius={[4, 4, 0, 0]} />
                 </BarChart>
               </ChartContainer>
-              <p className="text-xs text-muted-foreground mt-2 text-center">* Fév 2026 : données partielles (1-10 fév)</p>
             </CardContent>
           </Card>
 
@@ -176,21 +214,23 @@ const Dashboard = () => {
         </div>
 
         {/* Charts Row 2 */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
           <Card>
             <CardHeader>
-              <CardTitle className="text-lg">Visiteurs quotidiens — Février 2026</CardTitle>
+              <CardTitle className="text-lg capitalize">
+                Visiteurs quotidiens — {currentMonthName}
+              </CardTitle>
             </CardHeader>
             <CardContent>
               <ChartContainer config={chartConfig} className="h-[250px] w-full">
-                <LineChart data={dailyDataFeb}>
+                <LineChart data={dailyDataCurrentMonth}>
                   <XAxis dataKey="jour" />
                   <YAxis />
                   <ChartTooltip content={<ChartTooltipContent />} />
                   <Line type="monotone" dataKey="visiteurs" stroke="hsl(var(--primary))" strokeWidth={2} dot={{ r: 4, fill: "hsl(var(--primary))" }} />
                 </LineChart>
               </ChartContainer>
-              <p className="text-xs text-muted-foreground mt-2 text-center">Données du 1er au 10 février 2026</p>
+              <p className="text-xs text-muted-foreground mt-2 text-center">Données partielles du mois en cours</p>
             </CardContent>
           </Card>
 
@@ -200,7 +240,7 @@ const Dashboard = () => {
             </CardHeader>
             <CardContent>
               <div className="space-y-3">
-                {topDays.map((day, i) => (
+                {topDaysData.map((day, i) => (
                   <div key={day.date} className="flex items-center justify-between text-sm">
                     <div className="flex items-center gap-3">
                       <span className="text-muted-foreground font-mono w-5 text-right">{i + 1}.</span>
@@ -217,13 +257,74 @@ const Dashboard = () => {
           </Card>
         </div>
 
+        {/* Geographic Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-lg flex items-center gap-2">
+                <Globe className="w-5 h-5" />
+                Provenance par pays
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ChartContainer config={{ visiteurs: { label: "Visiteurs", color: "hsl(var(--primary))" } }} className="h-[300px] w-full">
+                <PieChart>
+                  <Pie
+                    data={pieData}
+                    cx="50%"
+                    cy="50%"
+                    outerRadius={100}
+                    dataKey="value"
+                    nameKey="name"
+                    label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                    labelLine={true}
+                  >
+                    {pieData.map((_, index) => (
+                      <Cell key={`cell-${index}`} fill={GEO_COLORS[index % GEO_COLORS.length]} />
+                    ))}
+                  </Pie>
+                  <ChartTooltip content={<ChartTooltipContent />} />
+                </PieChart>
+              </ChartContainer>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-lg flex items-center gap-2">
+                <MapPin className="w-5 h-5" />
+                Détail par pays / région
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-3">
+                {geoData.map((g, i) => (
+                  <div key={i} className="flex items-center justify-between text-sm">
+                    <div className="flex items-center gap-3">
+                      <div
+                        className="w-3 h-3 rounded-full"
+                        style={{ backgroundColor: GEO_COLORS[i % GEO_COLORS.length] }}
+                      />
+                      <span className="font-medium">{g.name}</span>
+                    </div>
+                    <div className="flex gap-4">
+                      <span className="text-primary font-semibold">{g.visitors}</span>
+                      <span className="text-muted-foreground w-14 text-right">{g.percentage}%</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
         {/* Footer */}
         <div className="text-center border-t pt-6">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} <span className="font-semibold">Tekila Conseils</span> — Tous droits réservés
           </p>
           <p className="text-xs text-muted-foreground mt-1">
-            Dernière mise à jour : 10 février 2026
+            Dernière mise à jour : {lastUpdated}
           </p>
         </div>
       </div>
