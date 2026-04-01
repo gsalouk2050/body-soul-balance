@@ -21,7 +21,7 @@ const Footer = () => {
           </div>
 
           <div className="space-y-2 text-cream/70 text-sm">
-            <p>Rue des Vollandes 6, 1207 Genève, Suisse</p>
+            <p>Rue Maunoir 13, 1207 Genève, Suisse</p>
             <p>Tél: <a href="tel:+41783434527" className="hover:text-cream transition-colors">+41 78 343 45 27</a></p>
             <p>Email: <a href="mailto:contact@dcg-therapie-psychocorporelle.ch" className="hover:text-cream transition-colors">contact@dcg-therapie-psychocorporelle.ch</a></p>
           </div>

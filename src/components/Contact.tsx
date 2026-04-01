@@ -117,7 +117,7 @@ const Contact = () => {
               </h3>
               <div className="aspect-square rounded-lg overflow-hidden bg-muted">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2761.1887445875445!2d6.155956476826134!3d46.19830817112088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c7b0c6c8c8c8d%3A0x8c8c8c8c8c8c8c8c!2sRue%20des%20Vollandes%206%2C%201207%20Gen%C3%A8ve!5e0!3m2!1sfr!2sch!4v1234567890123!5m2!1sfr!2sch"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2761.1887445875445!2d6.155956476826134!3d46.19830817112088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c7b0c6c8c8c8d%3A0x8c8c8c8c8c8c8c8c!2sRue%20Maunoir%2013%2C%201207%20Gen%C3%A8ve!5e0!3m2!1sfr!2sch!4v1234567890123!5m2!1sfr!2sch"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
