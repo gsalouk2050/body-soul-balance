@@ -168,12 +168,12 @@ const Rdv = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Adresse</h3>
                       <a 
-                        href="https://maps.google.com/?q=Rue+des+Vollandes+6,+1207+Genève,+Suisse"
+                         href="https://maps.google.com/?q=Rue+Maunoir+13,+1207+Genève,+Suisse"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-primary hover:underline"
                       >
-                        Rue des Vollandes 6<br />
+                         Rue Maunoir 13<br />
                         1207 Genève, Suisse
                       </a>
                     </div>
