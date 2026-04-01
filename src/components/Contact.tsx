@@ -54,15 +54,15 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-foreground mb-2">Adresse</h4>
                     <a 
-                      href="https://maps.google.com/?q=Rue+des+Vollandes+6,+1207+Genève,+Suisse"
+                      href="https://maps.google.com/?q=Rue+Maunoir+13,+1207+Genève,+Suisse"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-primary hover:underline"
                     >
                       <p className="text-muted-foreground">
-                        Rue des Vollandes 6<br />
+                        Rue Maunoir 13<br />
                         1207 Genève, Suisse<br />
-                        <span className="text-sm">(Rez-de-chaussée)</span>
+                        <span className="text-sm">(Au fond de la cour à gauche, 1er étage)</span>
                       </p>
                     </a>
                   </div>
