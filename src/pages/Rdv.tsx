@@ -168,12 +168,12 @@ const Rdv = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Adresse</h3>
                       <a 
-                        href="https://maps.google.com/?q=Rue+des+Vollandes+6,+1207+Genève,+Suisse"
+                         href="https://maps.google.com/?q=Rue+Maunoir+13,+1207+Genève,+Suisse"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-primary hover:underline"
                       >
-                        Rue des Vollandes 6<br />
+                         Rue Maunoir 13<br />
                         1207 Genève, Suisse
                       </a>
                     </div>
@@ -186,11 +186,10 @@ const Rdv = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Horaires</h3>
                       <p className="text-muted-foreground">
-                        Lundi : 8h-16h<br />
-                        Mardi : uniquement à domicile<br />
-                        Jeudi : 9h-19h<br />
-                        Vendredi : 9h-19h<br />
-                        Samedi : 8h-14h
+                        Lundi : 9h – 19h<br />
+                        Mardi : à domicile<br />
+                        Jeudi : 9h – 19h<br />
+                        Vendredi : 9h – 19h
                       </p>
                     </div>
                   </div>

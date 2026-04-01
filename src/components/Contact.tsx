@@ -54,15 +54,15 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-foreground mb-2">Adresse</h4>
                     <a 
-                      href="https://maps.google.com/?q=Rue+des+Vollandes+6,+1207+Genève,+Suisse"
+                      href="https://maps.google.com/?q=Rue+Maunoir+13,+1207+Genève,+Suisse"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-primary hover:underline"
                     >
                       <p className="text-muted-foreground">
-                        Rue des Vollandes 6<br />
+                        Rue Maunoir 13<br />
                         1207 Genève, Suisse<br />
-                        <span className="text-sm">(Rez-de-chaussée)</span>
+                        <span className="text-sm">(Au fond de la cour à gauche, 1er étage)</span>
                       </p>
                     </a>
                   </div>
@@ -88,11 +88,10 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-foreground mb-2">Horaires</h4>
                     <p className="text-muted-foreground">
-                      Lundi : 8h-16h<br />
-                      Mardi : uniquement à domicile<br />
-                      Jeudi : 9h-19h<br />
-                      Vendredi : 9h-19h<br />
-                      Samedi : 8h-14h
+                      Lundi : 9h – 19h<br />
+                      Mardi : à domicile<br />
+                      Jeudi : 9h – 19h<br />
+                      Vendredi : 9h – 19h
                     </p>
                   </div>
                 </div>
@@ -118,7 +117,7 @@ const Contact = () => {
               </h3>
               <div className="aspect-square rounded-lg overflow-hidden bg-muted">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2761.1887445875445!2d6.155956476826134!3d46.19830817112088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c7b0c6c8c8c8d%3A0x8c8c8c8c8c8c8c8c!2sRue%20des%20Vollandes%206%2C%201207%20Gen%C3%A8ve!5e0!3m2!1sfr!2sch!4v1234567890123!5m2!1sfr!2sch"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2761.1887445875445!2d6.155956476826134!3d46.19830817112088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c7b0c6c8c8c8d%3A0x8c8c8c8c8c8c8c8c!2sRue%20Maunoir%2013%2C%201207%20Gen%C3%A8ve!5e0!3m2!1sfr!2sch!4v1234567890123!5m2!1sfr!2sch"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
