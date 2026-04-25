@@ -131,12 +131,18 @@ const Contact = () => {
             </Card>
           </div>
 
-          <div className="mt-8 flex justify-center">
-            <img 
-              src={logoAsca} 
-              alt="Thérapeute agréé ASCA - Fondation suisse pour les médecines complémentaires" 
-              className="h-20 sm:h-24 object-contain"
-            />
+          <div className="mt-8 flex flex-col items-center gap-2">
+            <div className="bg-background rounded-xl shadow-sm border border-primary/10 px-6 py-4">
+              <img
+                src={logoAsca}
+                alt="Thérapeute agréée ASCA - Fondation suisse pour les médecines complémentaires"
+                loading="lazy"
+                width={1376}
+                height={768}
+                className="h-12 sm:h-14 w-auto object-contain"
+              />
+            </div>
+            <p className="text-xs text-muted-foreground">Agréée ASCA</p>
           </div>
         </div>
       </div>
