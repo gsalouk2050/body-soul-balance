@@ -21,6 +21,8 @@ const Hero = () => {
         <img
           src={heroImage}
           alt="Thérapie douce et apaisante"
+          fetchPriority="high"
+          decoding="async"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/40" />
