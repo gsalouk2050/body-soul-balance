@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Eye, BarChart3, ArrowLeft, TrendingUp, Globe, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import {
   ChartContainer,
   ChartTooltip,
@@ -112,9 +113,13 @@ const Dashboard = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Tableau de bord — DCG Sandrine</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       <div className="container mx-auto px-4 py-8">
         <div className="flex items-center gap-4 mb-8">
-          <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors">
+          <Link to="/" aria-label="Retour à l'accueil" className="text-muted-foreground hover:text-foreground transition-colors">
             <ArrowLeft className="w-5 h-5" />
           </Link>
           <div>

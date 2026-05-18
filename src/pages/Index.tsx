@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Approach from "@/components/Approach";
@@ -11,6 +12,9 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <link rel="canonical" href="https://dcg-therapie-psychocorporelle.ch/" />
+      </Helmet>
       <Header />
       <Hero />
       <Approach />

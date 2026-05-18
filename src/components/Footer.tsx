@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-6 flex flex-col items-center">
             <div className="w-16 h-16 mb-4 rounded-full bg-sage-light/20 p-3 flex items-center justify-center">
-              <img src={logoIcon} alt="DCG Logo" className="w-full h-full object-contain" />
+              <img src={logoIcon} alt="Logo DCG Sandrine — Massothérapie & Thérapie psychocorporelle" className="w-full h-full object-contain" />
             </div>
             <h3 className="text-2xl font-bold mb-2">DCG Sandrine</h3>
             <p className="text-beige">Massothérapie & Thérapie psychocorporelle</p>

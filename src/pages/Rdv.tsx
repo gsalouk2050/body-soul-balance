@@ -1,11 +1,17 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, MapPin, Phone, Mail } from "lucide-react";
-import { useState } from "react";
+import { useId, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useToast } from "@/hooks/use-toast";
 
 const Rdv = () => {
   const { toast } = useToast();
+  const nameId = useId();
+  const emailId = useId();
+  const phoneId = useId();
+  const serviceId = useId();
+  const messageId = useId();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -29,10 +35,18 @@ const Rdv = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-sage-light/30 via-beige/20 to-primary/10">
+      <Helmet>
+        <title>Prendre rendez-vous — DCG Sandrine, Massothérapie Genève</title>
+        <meta name="description" content="Réservez votre séance de massothérapie ou de thérapie psychocorporelle à Genève. Formulaire de demande et coordonnées." />
+        <link rel="canonical" href="https://dcg-therapie-psychocorporelle.ch/rdv" />
+        <meta property="og:title" content="Prendre rendez-vous — DCG Sandrine" />
+        <meta property="og:description" content="Réservez votre séance de massothérapie à Genève." />
+        <meta property="og:url" content="https://dcg-therapie-psychocorporelle.ch/rdv" />
+      </Helmet>
       {/* Header simple */}
       <header className="py-6 bg-background/80 backdrop-blur-sm border-b border-border/50">
         <div className="container mx-auto px-4">
-          <h1 className="text-2xl font-bold text-foreground">DCG Thérapie</h1>
+          <span className="text-2xl font-bold text-foreground">DCG Thérapie</span>
         </div>
       </header>
 
@@ -55,10 +69,11 @@ const Rdv = () => {
               </h2>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor={nameId} className="block text-sm font-medium text-foreground mb-2">
                     Nom complet *
                   </label>
                   <input
+                    id={nameId}
                     type="text"
                     name="name"
                     value={formData.name}
@@ -69,10 +84,11 @@ const Rdv = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor={emailId} className="block text-sm font-medium text-foreground mb-2">
                     Email *
                   </label>
                   <input
+                    id={emailId}
                     type="email"
                     name="email"
                     value={formData.email}
@@ -83,10 +99,11 @@ const Rdv = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor={phoneId} className="block text-sm font-medium text-foreground mb-2">
                     Téléphone *
                   </label>
                   <input
+                    id={phoneId}
                     type="tel"
                     name="phone"
                     value={formData.phone}
@@ -97,10 +114,11 @@ const Rdv = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor={serviceId} className="block text-sm font-medium text-foreground mb-2">
                     Type de service souhaité *
                   </label>
                   <select
+                    id={serviceId}
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
@@ -120,10 +138,11 @@ const Rdv = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor={messageId} className="block text-sm font-medium text-foreground mb-2">
                     Message (optionnel)
                   </label>
                   <textarea
+                    id={messageId}
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
