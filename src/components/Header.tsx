@@ -40,16 +40,16 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-full bg-primary/10 p-2 flex items-center justify-center">
-              <img src={logoIcon} alt="DCG Logo" className="w-full h-full object-contain" />
+              <img src={logoIcon} alt="Logo DCG Sandrine — Massothérapie & Thérapie psychocorporelle" className="w-full h-full object-contain" />
             </div>
             <div>
-              <h1 className="text-lg font-bold text-foreground">DCG Sandrine</h1>
+              <span className="block text-lg font-bold text-foreground">DCG Sandrine</span>
               <p className="text-xs text-muted-foreground">Massothérapie & Thérapie psychocorporelle</p>
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-8" aria-label="Navigation principale">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -71,6 +71,8 @@ const Header = () => {
           <button
             className="md:hidden text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
