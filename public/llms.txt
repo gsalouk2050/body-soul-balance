@@ -1,8 +1,18 @@
 # DCG Sandrine — Massothérapie & Thérapie psychocorporelle
 
-> Cabinet de massothérapie et de thérapie psychocorporelle à Genève. Libération somato-émotionnelle, agréée ASCA.
+> Cabinet de massothérapie, thérapie psychocorporelle et flossing thérapeutique à Genève (Eaux-Vives). Libération somato-émotionnelle. Thérapeute agréée ASCA.
+
+Sandrine accompagne, au cabinet de la Rue Maunoir 13 à Genève (1207 – Eaux-Vives) ainsi qu'à domicile, des personnes en quête de soulagement physique, de mieux-être émotionnel et d'écoute du corps. Les approches proposées incluent : massage thérapeutique, flossing thérapeutique, massage sportif – récupération, travail des fascias, thérapie psychocorporelle, accompagnement du stress et des tensions chroniques.
 
 ## Pages
 
-- [Accueil](/): Approche, services, à propos et contact.
-- [Prendre rendez-vous](/rdv): Formulaire de demande de rendez-vous et coordonnées.
+- [Accueil](https://dcg-therapie-psychocorporelle.ch/): Approche, services (massothérapie, flossing, thérapie psychocorporelle), à propos, contact.
+- [Prendre rendez-vous](https://dcg-therapie-psychocorporelle.ch/rdv): Réservation en ligne via OneDoc et coordonnées du cabinet.
+
+## Contenu complet pour IA
+
+- [Contenu complet du site (markdown)](https://dcg-therapie-psychocorporelle.ch/llms-full.txt): Tout le contenu textuel du site en markdown — services détaillés, flossing thérapeutique, tarifs, adresses, horaires, FAQ.
+
+## Optional
+
+- [Sitemap XML](https://dcg-therapie-psychocorporelle.ch/sitemap.xml)
