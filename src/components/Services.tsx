@@ -194,6 +194,118 @@ const Services = () => {
               ))}
             </div>
 
+            <Card className="p-8 bg-background/90 backdrop-blur-sm border-primary/20">
+              <details className="group">
+                <summary className="cursor-pointer list-none flex items-center justify-between gap-4">
+                  <div className="flex items-center gap-3">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                      <Waves className="w-5 h-5 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-bold text-foreground">En savoir plus sur le flossing thérapeutique</h3>
+                  </div>
+                  <span className="text-primary text-sm font-medium group-open:hidden">Afficher</span>
+                  <span className="text-primary text-sm font-medium hidden group-open:inline">Masquer</span>
+                </summary>
+                <div className="mt-6 space-y-6 text-muted-foreground leading-relaxed">
+                  <div>
+                    <h4 className="text-lg font-semibold text-foreground mb-2">Flossing thérapeutique à Genève</h4>
+                    <p className="italic mb-3">Bandes compressives, mobilité et récupération myofasciale</p>
+                    <p className="mb-3">
+                      Le flossing thérapeutique est une technique de thérapie manuelle utilisant des bandes élastiques compressives associées au mouvement afin de favoriser la mobilité, le relâchement tissulaire et la récupération fonctionnelle du corps.
+                    </p>
+                    <p>
+                      Proposé au cabinet DCG Sandrine Massothérapie & Thérapie psychocorporelle à Genève, le flossing s'intègre dans une approche globale du corps, des fascias et du mouvement.
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="mb-3">Cette approche peut être proposée dans l'accompagnement :</p>
+                    <ul className="space-y-2 ml-1">
+                      {[
+                        "des douleurs musculaires et articulaires,",
+                        "des restrictions de mobilité,",
+                        "des tensions myofasciales,",
+                        "des sensations de raideur corporelle,",
+                        "de la récupération sportive,",
+                        "de certaines suites post-opératoires,",
+                        "des tensions chroniques du corps.",
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold text-foreground mb-2">Une approche corporelle basée sur les fascias et le mouvement</h4>
+                    <p className="mb-3">
+                      Le flossing agit grâce à une compression tissulaire temporaire réalisée avec des bandes spécifiques, combinée à des mouvements adaptés et progressifs.
+                    </p>
+                    <p className="mb-3">Cette technique peut contribuer à :</p>
+                    <ul className="space-y-2 ml-1">
+                      {[
+                        "améliorer la mobilité articulaire,",
+                        "favoriser le glissement des tissus et des fascias,",
+                        "soutenir la circulation sanguine et lymphatique,",
+                        "améliorer la récupération musculaire,",
+                        "diminuer certaines tensions mécaniques,",
+                        "favoriser une meilleure perception corporelle.",
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="mt-3">
+                      Le travail est toujours réalisé de manière progressive, personnalisée et adaptée aux besoins de la personne.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold text-foreground mb-2">Flossing thérapeutique et récupération post-opératoire</h4>
+                    <p className="mb-3">
+                      Le flossing thérapeutique peut également être intégré dans certains accompagnements post-opératoires, en complément d'un suivi médical adapté.
+                    </p>
+                    <p>
+                      Selon les besoins, cette approche peut aider à soutenir la mobilité, la récupération fonctionnelle et certaines sensations de raideur ou de tension tissulaire après une intervention.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold text-foreground mb-2">Une prise en charge globale à Genève</h4>
+                    <p className="mb-3">
+                      Au cabinet situé à Genève – Eaux-Vives, le flossing thérapeutique peut être intégré à différentes approches complémentaires :
+                    </p>
+                    <ul className="space-y-2 ml-1">
+                      {[
+                        "massage thérapeutique,",
+                        "massage sportif récupération,",
+                        "travail des fascias,",
+                        "thérapie psychocorporelle,",
+                        "accompagnement du stress et des tensions chroniques.",
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="mt-3">
+                      L'objectif est d'accompagner le corps vers davantage de mobilité, de fluidité et de confort durable.
+                    </p>
+                  </div>
+
+                  <div className="pt-4 border-t border-primary/20 flex flex-col sm:flex-row sm:justify-between gap-2">
+                    <span><strong className="text-foreground">Durée de la séance :</strong> 60 minutes</span>
+                    <span><strong className="text-foreground">Tarif :</strong> 130 CHF</span>
+                  </div>
+                </div>
+              </details>
+            </Card>
+
             <Card className="p-6 bg-gradient-to-br from-primary/10 via-sage-light/15 to-beige/20 border-primary/30 backdrop-blur-sm">
               <h4 className="font-bold text-foreground mb-4">
                 Tarif des soins
