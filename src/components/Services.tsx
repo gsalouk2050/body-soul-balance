@@ -29,6 +29,11 @@ const massageServices = [
     description: "Gestes doux et réguliers qui invitent au lâcher-prise total. Un moment de détente absolue pour harmoniser la circulation et apaiser le quotidien."
   },
   {
+    icon: Waves,
+    title: "Flossing thérapeutique",
+    description: "Technique manuelle utilisant des bandes élastiques compressives associées au mouvement pour favoriser la mobilité, le relâchement tissulaire et la récupération myofasciale."
+  },
+  {
     icon: Activity,
     title: "Massage sportif - récupération",
     description: "Conçu pour aider le corps après l'effort, relâche les tensions, soulage les zones sollicitées et limite les courbatures."
