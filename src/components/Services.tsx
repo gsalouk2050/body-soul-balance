@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { HandHeart, Activity, Baby, Sparkles, Footprints } from "lucide-react";
+import { HandHeart, Activity, Baby, Sparkles, Footprints, Waves } from "lucide-react";
 
 const therapyServices = [
   {
