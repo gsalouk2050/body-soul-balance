@@ -298,6 +298,52 @@ const Services = () => {
                     </p>
                   </div>
 
+                  <div className="rounded-lg bg-gradient-to-br from-sage-light/30 via-background to-beige/20 border border-primary/20 p-5">
+                    <h4 className="text-lg font-semibold text-foreground mb-2">Flossing thérapeutique à Genève – Eaux-Vives</h4>
+                    <p className="mb-3">
+                      Le cabinet DCG Sandrine vous accueille pour vos séances de flossing thérapeutique au cœur du quartier des <strong>Eaux-Vives</strong>, à deux pas de la <strong>Rive droite</strong>, de <strong>Rive</strong>, de la <strong>Terrassière</strong> et de <strong>Champel</strong>.
+                    </p>
+                    <p className="mb-3">
+                      <strong className="text-foreground">Adresse :</strong> Rue Maunoir 13, 1207 Genève (au fond de la cour à gauche, 1er étage).
+                    </p>
+                    <p>
+                      Facilement accessible en transports publics (arrêts Rive, Terrassière, Eaux-Vives) et idéalement situé pour les habitants et travailleurs de Genève centre et de la rive gauche.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold text-foreground mb-3">Questions fréquentes sur le flossing</h4>
+                    <div className="space-y-4">
+                      {[
+                        {
+                          q: "Qu'est-ce que le flossing thérapeutique ?",
+                          a: "Une technique manuelle utilisant des bandes élastiques compressives associées au mouvement, pour favoriser la mobilité articulaire, le relâchement des fascias et la récupération myofasciale.",
+                        },
+                        {
+                          q: "Où se déroulent les séances à Genève ?",
+                          a: "Au cabinet DCG Sandrine, Rue Maunoir 13, 1207 Genève – quartier des Eaux-Vives (au fond de la cour à gauche, 1er étage).",
+                        },
+                        {
+                          q: "Combien coûte une séance ?",
+                          a: "Une séance de flossing thérapeutique dure 60 minutes et coûte 130 CHF.",
+                        },
+                        {
+                          q: "À qui s'adresse cette technique ?",
+                          a: "Aux personnes souffrant de douleurs musculaires ou articulaires, de restrictions de mobilité, de tensions myofasciales, ainsi qu'en récupération sportive ou en suites post-opératoires.",
+                        },
+                        {
+                          q: "Est-ce remboursé par les assurances ?",
+                          a: "En tant que thérapeute agréée ASCA, les séances peuvent être prises en charge par la plupart des assurances complémentaires suisses, selon votre couverture.",
+                        },
+                      ].map((item, i) => (
+                        <details key={i} className="rounded-md border border-primary/10 bg-background/60 p-4">
+                          <summary className="cursor-pointer font-medium text-foreground">{item.q}</summary>
+                          <p className="mt-2 text-muted-foreground">{item.a}</p>
+                        </details>
+                      ))}
+                    </div>
+                  </div>
+
                   <div className="pt-4 border-t border-primary/20 flex flex-col sm:flex-row sm:justify-between gap-2">
                     <span><strong className="text-foreground">Durée de la séance :</strong> 60 minutes</span>
                     <span><strong className="text-foreground">Tarif :</strong> 130 CHF</span>
