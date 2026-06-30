@@ -186,7 +186,7 @@ const Services = () => {
                   </div>
                   <p className="text-muted-foreground leading-relaxed mb-3">{service.description}</p>
                   {service.note && (
-                    <p className="text-sm text-muted-foreground/80 italic">
+                    <p className="text-sm text-foreground/80 italic">
                       ℹ️ {service.note}
                     </p>
                   )}
