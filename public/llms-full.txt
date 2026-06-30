@@ -3,8 +3,10 @@
 > Cabinet à Genève (Eaux-Vives) — Rue Maunoir 13, 1207 Genève. Thérapeute agréée ASCA. Prise en charge possible par la plupart des assurances complémentaires suisses.
 
 Site officiel : https://dcg-therapie-psychocorporelle.ch
-Réservation en ligne : https://app.onedoc.ch/fr/embed/widget/sandrine-jaccoud
-Contact : info@dcg-therapie-psychocorporelle.ch
+Réservation en ligne (OneDoc) : https://www.onedoc.ch/fr/therapeute/26143/dcg-sandrine
+Téléphone : +41 78 343 45 27
+Email : contact@dcg-therapie-psychocorporelle.ch
+Adresse : Rue Maunoir 13, 1207 Genève — Eaux-Vives (au fond de la cour à gauche, 1er étage)
 
 ## À propos
 
@@ -94,4 +96,15 @@ Sandrine est agréée **ASCA** (Fondation Suisse pour les Médecines Complément
 
 ## Réservation
 
-Prise de rendez-vous en ligne : https://app.onedoc.ch/fr/embed/widget/sandrine-jaccoud
+Prise de rendez-vous en ligne (OneDoc) : https://www.onedoc.ch/fr/therapeute/26143/dcg-sandrine
+
+Contact direct :
+- Téléphone : +41 78 343 45 27
+- Email : contact@dcg-therapie-psychocorporelle.ch
+
+## Fichiers pour IA
+
+- Résumé structuré : https://dcg-therapie-psychocorporelle.ch/llms.txt
+- Contenu complet (ce fichier) : https://dcg-therapie-psychocorporelle.ch/llms-full.txt
+- Sitemap : https://dcg-therapie-psychocorporelle.ch/sitemap.xml
+
