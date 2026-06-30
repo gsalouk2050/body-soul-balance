@@ -17,32 +17,74 @@
 
     <meta name="twitter:card" content="summary_large_image" />
 
+    <link rel="alternate" type="text/markdown" href="/llms.txt" title="llms.txt — résumé IA" />
+    <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="llms-full.txt — contenu complet IA" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
 
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": ["LocalBusiness", "HealthAndBeautyBusiness", "MedicalBusiness"],
+        "@id": "https://dcg-therapie-psychocorporelle.ch/#business",
         "name": "DCG Sandrine - Massothérapie & Thérapie psychocorporelle",
+        "description": "Cabinet de massothérapie, thérapie psychocorporelle et flossing thérapeutique à Genève (Eaux-Vives). Libération somato-émotionnelle. Thérapeute agréée ASCA.",
         "image": "https://dcg-therapie-psychocorporelle.ch/favicon.png",
         "url": "https://dcg-therapie-psychocorporelle.ch/",
         "telephone": "+41783434527",
         "email": "contact@dcg-therapie-psychocorporelle.ch",
+        "priceRange": "CHF 90 - CHF 230",
+        "currenciesAccepted": "CHF",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Rue Maunoir 13",
           "postalCode": "1207",
           "addressLocality": "Genève",
+          "addressRegion": "GE",
           "addressCountry": "CH"
         },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 46.2008,
+          "longitude": 6.1612
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Genève" },
+          { "@type": "Place", "name": "Eaux-Vives" },
+          { "@type": "Place", "name": "Rive" },
+          { "@type": "Place", "name": "Terrassière" },
+          { "@type": "Place", "name": "Champel" },
+          { "@type": "Place", "name": "Thônex" },
+          { "@type": "Place", "name": "Chêne-Bourgeries" },
+          { "@type": "Place", "name": "Chêne-Bourg" },
+          { "@type": "Place", "name": "Veyrier" }
+        ],
         "openingHoursSpecification": [
           { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "09:00", "closes": "19:00" },
           { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "09:00", "closes": "19:00" },
           { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:00", "closes": "19:00" }
-        ]
+        ],
+        "sameAs": [
+          "https://www.onedoc.ch/fr/therapeute/26143/dcg-sandrine"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Soins et thérapies",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Massothérapie" }, "price": "90", "priceCurrency": "CHF", "description": "Séance 45 minutes" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Massothérapie" }, "price": "130", "priceCurrency": "CHF", "description": "Séance 60 minutes" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Massothérapie" }, "price": "180", "priceCurrency": "CHF", "description": "Séance 90 minutes" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Massothérapie" }, "price": "230", "priceCurrency": "CHF", "description": "Séance 120 minutes" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Flossing thérapeutique" }, "price": "130", "priceCurrency": "CHF", "description": "Séance 60 minutes — bandes compressives, mobilité, récupération myofasciale" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Thérapie psychocorporelle" }, "description": "Libération somato-émotionnelle, tarif selon durée" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Massage sportif - récupération" }, "description": "Préparation, récupération, prévention des blessures" }
+          ]
+        }
       }
+
     </script>
   </head>
 
