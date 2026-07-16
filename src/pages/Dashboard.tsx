@@ -67,6 +67,18 @@ const Dashboard = () => {
       visiteurs: d.visitors,
     }));
 
+  const dailySinceJan = (daily.data ?? [])
+    .filter((d: any) => {
+      const date = new Date(d.date);
+      return date >= new Date(2026, 0, 1) && date <= now;
+    })
+    .sort((a: any, b: any) => new Date(a.date).getTime() - new Date(b.date).getTime())
+    .map((d: any) => ({
+      date: new Date(d.date).toLocaleDateString("fr-FR", { day: "2-digit", month: "short" }),
+      visiteurs: d.visitors,
+      pages: d.pageviews,
+    }));
+
   const geoData = (geo.data ?? []).map((g: any) => ({
     name: g.region ? `${g.country} – ${g.region}` : g.country,
     country: g.country,
