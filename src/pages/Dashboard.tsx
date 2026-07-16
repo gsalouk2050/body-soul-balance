@@ -162,7 +162,13 @@ const Dashboard = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Tableau de bord — DCG Sandrine</title>
+        <meta name="description" content="Tableau de bord interne des statistiques de fréquentation du site DCG Sandrine." />
+        <link rel="canonical" href="https://dcg-therapie-psychocorporelle.ch/dashboard" />
         <meta name="robots" content="noindex, nofollow" />
+        <meta property="og:title" content="Tableau de bord — DCG Sandrine" />
+        <meta property="og:description" content="Statistiques de fréquentation du site." />
+        <meta property="og:url" content="https://dcg-therapie-psychocorporelle.ch/dashboard" />
+        <meta property="og:type" content="website" />
       </Helmet>
       <div className="container mx-auto px-4 py-8">
         <div className="flex items-center gap-4 mb-8">
