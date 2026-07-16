@@ -241,22 +241,25 @@ const Dashboard = () => {
 
           <Card>
             <CardHeader>
-              <CardTitle className="text-lg">🏆 Top 8 — Jours les plus fréquentés</CardTitle>
+              <CardTitle className="text-lg">🏆 Top — Mois les plus fréquentés</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="space-y-3">
-                {topDaysData.map((day, i) => (
-                  <div key={day.date} className="flex items-center justify-between text-sm">
-                    <div className="flex items-center gap-3">
-                      <span className="text-muted-foreground font-mono w-5 text-right">{i + 1}.</span>
-                      <span className="font-medium">{day.date}</span>
+                {[...monthlyData]
+                  .sort((a, b) => b.visiteurs - a.visiteurs)
+                  .slice(0, 8)
+                  .map((m, i) => (
+                    <div key={m.month} className="flex items-center justify-between text-sm">
+                      <div className="flex items-center gap-3">
+                        <span className="text-muted-foreground font-mono w-5 text-right">{i + 1}.</span>
+                        <span className="font-medium capitalize">{m.month}</span>
+                      </div>
+                      <div className="flex gap-4">
+                        <span className="text-primary font-semibold">{m.visiteurs} visiteurs</span>
+                        <span className="text-muted-foreground">{m.pages} pages</span>
+                      </div>
                     </div>
-                    <div className="flex gap-4">
-                      <span className="text-primary font-semibold">{day.visiteurs} visiteurs</span>
-                      <span className="text-muted-foreground">{day.pages} pages</span>
-                    </div>
-                  </div>
-                ))}
+                  ))}
               </div>
             </CardContent>
           </Card>
