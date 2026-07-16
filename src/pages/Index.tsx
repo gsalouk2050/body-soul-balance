@@ -17,9 +17,9 @@ const Index = () => {
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "MedicalBusiness",
-          "name": "DCG Sandrine - Flossing thérapeutique à Genève (Eaux-Vives)",
+          "name": "DCG Sandrine - Massothérapie & Thérapie psychocorporelle",
           "image": "https://dcg-therapie-psychocorporelle.ch/favicon.png",
-          "url": "https://dcg-therapie-psychocorporelle.ch/#flossing",
+          "url": "https://dcg-therapie-psychocorporelle.ch/",
           "telephone": "+41783434527",
           "email": "contact@dcg-therapie-psychocorporelle.ch",
           "priceRange": "CHF 90 - CHF 230",

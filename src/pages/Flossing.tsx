@@ -66,7 +66,7 @@ const Flossing = () => {
         <title>Flossing thérapeutique à Genève — DCG Sandrine (Eaux-Vives)</title>
         <meta
           name="description"
-          content="Flossing thérapeutique à Genève (Eaux-Vives) : bandes compressives, mobilité, fascias et récupération myofasciale. Séance 60 min – 130 CHF. Thérapeute agréée ASCA."
+          content="Flossing thérapeutique à Genève (Eaux-Vives) : bandes compressives, mobilité et fascias. Séance 60 min – 130 CHF. Agréée ASCA."
         />
         <link rel="canonical" href="https://dcg-therapie-psychocorporelle.ch/flossing" />
         <meta property="og:title" content="Flossing thérapeutique à Genève — DCG Sandrine" />
