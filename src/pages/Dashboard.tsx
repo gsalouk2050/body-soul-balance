@@ -28,6 +28,33 @@ const GEO_COLORS = [
   "hsl(var(--muted-foreground) / 0.4)",
 ];
 
+const monthIndexByLabel: Record<string, number> = {
+  jan: 0,
+  fév: 1,
+  fev: 1,
+  mar: 2,
+  avr: 3,
+  mai: 4,
+  jun: 5,
+  juin: 5,
+  jul: 6,
+  juil: 6,
+  août: 7,
+  aou: 7,
+  sep: 8,
+  oct: 9,
+  nov: 10,
+  déc: 11,
+  dec: 11,
+};
+
+const getMonthSortValue = (label: string) => {
+  const [monthPart = "", yearPart = ""] = label.toLowerCase().replace(".", "").split(" ");
+  const month = monthIndexByLabel[monthPart] ?? 0;
+  const year = 2000 + Number.parseInt(yearPart, 10);
+  return year * 12 + month;
+};
+
 const Dashboard = () => {
   const { monthly, daily, geo, topDays, kpis, isLoading } = useAnalyticsData();
 
@@ -36,12 +63,16 @@ const Dashboard = () => {
     return item?.value ?? 0;
   };
 
-  const monthlyData = (monthly.data ?? []).map((m: any) => ({
-    month: m.month_label,
-    visiteurs: m.visitors,
-    pages: m.pageviews,
-    is_partial: m.is_partial,
-  }));
+  const monthlyData = (monthly.data ?? [])
+    .map((m: any) => ({
+      month: m.month_label,
+      visiteurs: m.visitors,
+      pages: m.pageviews,
+      is_partial: m.is_partial,
+    }))
+    .sort((a, b) => getMonthSortValue(a.month) - getMonthSortValue(b.month));
+
+  const bestMonth = [...monthlyData].sort((a, b) => b.visiteurs - a.visiteurs)[0];
 
   const now = new Date();
   const currentMonth = now.getMonth() + 1;
@@ -50,7 +81,7 @@ const Dashboard = () => {
   const dailyDataJan = (daily.data ?? [])
     .filter((d: any) => {
       const date = new Date(d.date);
-      return date.getMonth() === 0 && date.getFullYear() === 2026;
+      return date.getMonth() === 0 && date.getFullYear() === currentYear;
     })
     .map((d: any) => ({
       jour: new Date(d.date).getDate().toString(),
@@ -70,7 +101,7 @@ const Dashboard = () => {
   const dailySinceJan = (daily.data ?? [])
     .filter((d: any) => {
       const date = new Date(d.date);
-      return date >= new Date(2026, 0, 1) && date <= now;
+      return date >= new Date(currentYear, 0, 1) && date <= now;
     })
     .sort((a: any, b: any) => new Date(a.date).getTime() - new Date(b.date).getTime())
     .map((d: any) => ({
@@ -188,7 +219,7 @@ const Dashboard = () => {
               <div>
                 <p className="text-sm text-muted-foreground">Meilleur mois</p>
                 <p className="text-2xl font-bold">{getKpi("best_month_visitors")}</p>
-                <p className="text-xs text-muted-foreground">Janvier 2026</p>
+                <p className="text-xs text-muted-foreground capitalize">{bestMonth?.month ?? "—"}</p>
               </div>
             </CardContent>
           </Card>
@@ -215,7 +246,7 @@ const Dashboard = () => {
 
           <Card>
             <CardHeader>
-              <CardTitle className="text-lg">Visiteurs quotidiens — Janvier 2026</CardTitle>
+              <CardTitle className="text-lg">Visiteurs quotidiens — Janvier {currentYear}</CardTitle>
             </CardHeader>
             <CardContent>
               <ChartContainer config={chartConfig} className="h-[280px] w-full">

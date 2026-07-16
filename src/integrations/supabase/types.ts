@@ -38,6 +38,36 @@ export type Database = {
         }
         Relationships: []
       }
+      analytics_events: {
+        Row: {
+          created_at: string
+          device_type: string
+          event_date: string
+          id: string
+          page_path: string
+          referrer_host: string | null
+          visitor_key: string
+        }
+        Insert: {
+          created_at?: string
+          device_type: string
+          event_date?: string
+          id?: string
+          page_path: string
+          referrer_host?: string | null
+          visitor_key: string
+        }
+        Update: {
+          created_at?: string
+          device_type?: string
+          event_date?: string
+          id?: string
+          page_path?: string
+          referrer_host?: string | null
+          visitor_key?: string
+        }
+        Relationships: []
+      }
       analytics_geo: {
         Row: {
           country: string

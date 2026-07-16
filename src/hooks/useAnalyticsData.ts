@@ -8,7 +8,7 @@ export function useAnalyticsData() {
       const { data, error } = await supabase
         .from("analytics_monthly")
         .select("*")
-        .order("created_at", { ascending: true });
+        .order("updated_at", { ascending: true });
       if (error) throw error;
       return data;
     },

@@ -8,6 +8,7 @@ import Rdv from "./pages/Rdv";
 import Dashboard from "./pages/Dashboard";
 import Flossing from "./pages/Flossing";
 import NotFound from "./pages/NotFound";
+import { AnalyticsTracker } from "./components/AnalyticsTracker";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <AnalyticsTracker />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/rdv" element={<Rdv />} />
