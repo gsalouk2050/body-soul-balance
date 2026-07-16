@@ -1,0 +1,14 @@
+/* TEAM */
+Thérapeute : Sandrine
+Cabinet : DCG Sandrine — Massothérapie & Thérapie psychocorporelle
+Contact : contact@dcg-therapie-psychocorporelle.ch
+Téléphone : +41 78 343 45 27
+Localisation : Rue Maunoir 13, 1207 Genève (Eaux-Vives), Suisse
+
+/* SITE */
+Langue : Français
+Domaine : https://dcg-therapie-psychocorporelle.ch
+Réservation : https://www.onedoc.ch/fr/therapeute/26143/dcg-sandrine
+
+/* CREDITS */
+Conception & développement : Tekila Conseils — https://tekila.ch
