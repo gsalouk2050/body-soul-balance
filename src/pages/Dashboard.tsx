@@ -230,6 +230,24 @@ const Dashboard = () => {
           </Card>
         </div>
 
+        {/* Full trend since January */}
+        <Card className="mb-6">
+          <CardHeader>
+            <CardTitle className="text-lg">Évolution des visiteurs — Janvier à aujourd'hui</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ChartContainer config={chartConfig} className="h-[320px] w-full">
+              <AreaChart data={dailySinceJan}>
+                <XAxis dataKey="date" minTickGap={30} />
+                <YAxis />
+                <ChartTooltip content={<ChartTooltipContent />} />
+                <Area type="monotone" dataKey="visiteurs" fill="hsl(var(--primary) / 0.2)" stroke="hsl(var(--primary))" strokeWidth={2} />
+                <Area type="monotone" dataKey="pages" fill="hsl(var(--accent) / 0.15)" stroke="hsl(var(--accent))" strokeWidth={2} />
+              </AreaChart>
+            </ChartContainer>
+          </CardContent>
+        </Card>
+
         {/* Charts Row 2 */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
           <Card>
