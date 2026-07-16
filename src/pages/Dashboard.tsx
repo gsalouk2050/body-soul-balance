@@ -67,6 +67,18 @@ const Dashboard = () => {
       visiteurs: d.visitors,
     }));
 
+  const dailySinceJan = (daily.data ?? [])
+    .filter((d: any) => {
+      const date = new Date(d.date);
+      return date >= new Date(2026, 0, 1) && date <= now;
+    })
+    .sort((a: any, b: any) => new Date(a.date).getTime() - new Date(b.date).getTime())
+    .map((d: any) => ({
+      date: new Date(d.date).toLocaleDateString("fr-FR", { day: "2-digit", month: "short" }),
+      visiteurs: d.visitors,
+      pages: d.pageviews,
+    }));
+
   const geoData = (geo.data ?? []).map((g: any) => ({
     name: g.region ? `${g.country} – ${g.region}` : g.country,
     country: g.country,
@@ -217,6 +229,24 @@ const Dashboard = () => {
             </CardContent>
           </Card>
         </div>
+
+        {/* Full trend since January */}
+        <Card className="mb-6">
+          <CardHeader>
+            <CardTitle className="text-lg">Évolution des visiteurs — Janvier à aujourd'hui</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ChartContainer config={chartConfig} className="h-[320px] w-full">
+              <AreaChart data={dailySinceJan}>
+                <XAxis dataKey="date" minTickGap={30} />
+                <YAxis />
+                <ChartTooltip content={<ChartTooltipContent />} />
+                <Area type="monotone" dataKey="visiteurs" fill="hsl(var(--primary) / 0.2)" stroke="hsl(var(--primary))" strokeWidth={2} />
+                <Area type="monotone" dataKey="pages" fill="hsl(var(--accent) / 0.15)" stroke="hsl(var(--accent))" strokeWidth={2} />
+              </AreaChart>
+            </ChartContainer>
+          </CardContent>
+        </Card>
 
         {/* Charts Row 2 */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
