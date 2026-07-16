@@ -42,6 +42,7 @@ const Rdv = () => {
         <meta property="og:title" content="Prendre rendez-vous — DCG Sandrine" />
         <meta property="og:description" content="Réservez votre séance de massothérapie à Genève." />
         <meta property="og:url" content="https://dcg-therapie-psychocorporelle.ch/rdv" />
+        <meta property="og:type" content="website" />
       </Helmet>
       {/* Header simple */}
       <header className="py-6 bg-background/80 backdrop-blur-sm border-b border-border/50">
