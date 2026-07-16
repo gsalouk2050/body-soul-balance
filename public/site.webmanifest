@@ -1,0 +1,16 @@
+{
+  "name": "DCG Sandrine — Massothérapie & Thérapie psychocorporelle",
+  "short_name": "DCG Sandrine",
+  "description": "Cabinet de massothérapie et thérapie psychocorporelle à Genève (Eaux-Vives). Agréée ASCA.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5f1ea",
+  "theme_color": "#8a9a7b",
+  "lang": "fr-CH",
+  "icons": [
+    { "src": "/favicon.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/favicon.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
