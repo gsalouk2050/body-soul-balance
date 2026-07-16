@@ -30,9 +30,13 @@ const GEO_COLORS = [
 
 const monthIndexByLabel: Record<string, number> = {
   jan: 0,
+  janv: 0,
   fév: 1,
+  févr: 1,
   fev: 1,
+  fevr: 1,
   mar: 2,
+  mars: 2,
   avr: 3,
   mai: 4,
   jun: 5,

@@ -13,15 +13,11 @@ type DailyRow = {
   pageviews: number;
 };
 
-const monthFormatter = new Intl.DateTimeFormat("fr-CH", {
-  month: "short",
-  year: "2-digit",
-  timeZone: "UTC",
-});
+const monthNames = ["Janv", "Févr", "Mars", "Avr", "Mai", "Juin", "Juil", "Août", "Sep", "Oct", "Nov", "Déc"];
 
 const monthLabel = (date: string) => {
-  const label = monthFormatter.format(new Date(`${date}T00:00:00Z`)).replace(".", "");
-  return label.charAt(0).toUpperCase() + label.slice(1);
+  const parsedDate = new Date(`${date}T00:00:00Z`);
+  return `${monthNames[parsedDate.getUTCMonth()]} ${parsedDate.getUTCFullYear().toString().slice(-2)}`;
 };
 
 const fetchAllEvents = async (supabase: ReturnType<typeof createClient>) => {
