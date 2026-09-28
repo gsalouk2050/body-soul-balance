@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/chart";
 import { BarChart, Bar, XAxis, YAxis, AreaChart, Area, LineChart, Line, PieChart, Pie, Cell } from "recharts";
 import { useAnalyticsData } from "@/hooks/useAnalyticsData";
+import SeoStatusPanel from "@/components/SeoStatusPanel";
 
 const chartConfig = {
   visiteurs: { label: "Visiteurs", color: "hsl(var(--primary))" },
@@ -396,6 +397,8 @@ const Dashboard = () => {
             </CardContent>
           </Card>
         </div>
+
+        <SeoStatusPanel />
 
         {/* Footer */}
         <div className="text-center border-t pt-6">
