@@ -173,6 +173,66 @@ export type Database = {
         }
         Relationships: []
       }
+      seo_issues: {
+        Row: {
+          action: string | null
+          created_at: string
+          id: string
+          page: string
+          severity: string
+          status: string
+          title: string
+        }
+        Insert: {
+          action?: string | null
+          created_at?: string
+          id?: string
+          page: string
+          severity?: string
+          status?: string
+          title: string
+        }
+        Update: {
+          action?: string | null
+          created_at?: string
+          id?: string
+          page?: string
+          severity?: string
+          status?: string
+          title?: string
+        }
+        Relationships: []
+      }
+      seo_pages: {
+        Row: {
+          id: string
+          label: string
+          last_crawl: string | null
+          note: string | null
+          status: string
+          updated_at: string
+          url: string
+        }
+        Insert: {
+          id?: string
+          label: string
+          last_crawl?: string | null
+          note?: string | null
+          status?: string
+          updated_at?: string
+          url: string
+        }
+        Update: {
+          id?: string
+          label?: string
+          last_crawl?: string | null
+          note?: string | null
+          status?: string
+          updated_at?: string
+          url?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
